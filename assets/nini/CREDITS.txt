@@ -1,0 +1,41 @@
+PIXEL WARDROBE / 像素衣橱 — ART CREDITS（恩希专区 / pack id: nini）
+========================================================================
+
+这个素材包里的**每一个像素**都是 恩希 画的，和 LPC 素材没有任何关系：
+身体、眼睛、发型、衣服、鞋、头饰、尾巴，22 件，全部原创。
+
+作者：恩希
+授权：CC-BY-SA 3.0
+
+像素衣橱这边做的只有两件事：把 384×384（6 倍）的原稿按 6×6 取众数缩回
+64×64；按她自己那条色阶换色（衣服 / 头饰 / 尾巴 48 色、头发 26 色、
+眼睛 8 色、肤色 8 档）。换色是衍生作品，同样按 CC-BY-SA 3.0 发布。
+
+------------------------------------------------------------------------
+逐件清单
+------------------------------------------------------------------------
+
+body.nini.blush            腮红             投稿收件/像素捏捏/face_sh.PNG
+body.nini.body             身体             投稿收件/像素捏捏/body.png
+body.nini.eyes_default     眼睛             投稿收件/像素捏捏/eyes_default.png
+body.nini.eyes_mmy         眯眯眼            投稿收件/像素捏捏/eyes_mmy.PNG
+body.nini.glasses          半框眼镜           投稿收件/像素捏捏/face_yj.PNG
+body.nini.mask             口罩             投稿收件/像素捏捏/face_kz.PNG
+feet.nini.boots            长靴             投稿收件/像素捏捏/shoes_boots.png
+feet.nini.sneaker          高帮运动鞋          投稿收件/像素捏捏/shoes_sneaker.png
+hair.nini.long             长直发            投稿收件/像素捏捏/hair_long_back.png
+hair.nini.short            短发             投稿收件/像素捏捏/hair_short_back.PNG
+hair.nini.twin             双马尾            投稿收件/像素捏捏/hair_twin_back.png
+headwear.nini.bow          蝴蝶结            投稿收件/像素捏捏/hat_hdj.PNG
+headwear.nini.cat_ears     猫耳朵            投稿收件/像素捏捏/ears_cat.PNG
+headwear.nini.horns        恶魔角            投稿收件/像素捏捏/hat_emj.PNG
+legs.nini.pants            长裤             投稿收件/像素捏捏/bottom_pants.png
+legs.nini.skirt            短裙             投稿收件/像素捏捏/bottom_skirt.png
+tail.nini.cat              猫尾巴            投稿收件/像素捏捏/tail_cat.PNG
+tail.nini.demon            恶魔尾巴           投稿收件/像素捏捏/tail_em.PNG
+tail.nini.fox              狐狸尾巴           投稿收件/像素捏捏/tail_fox.PNG
+torso.nini.dress           无袖连衣裙          投稿收件/像素捏捏/top_dress.png
+torso.nini.shirt           短袖衬衫           投稿收件/像素捏捏/top_shirt.png
+torso.nini.tee             短袖 T 恤         投稿收件/像素捏捏/top_tee.png
+
+转载 / 二次使用请一并带上作者名 恩希 和授权 CC-BY-SA 3.0。

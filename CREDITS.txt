@@ -13,3 +13,14 @@ Sprites contributed as part of the Liberated Pixel Cup project on OpenGameArt.or
 逐文件的完整作者名单（60 位作者）：
   assets/female/CREDITS.txt   女生版素材包
   assets/male/CREDITS.txt     男生版素材包
+
+------------------------------------------------------------------------
+画师专区：「恩希专区」—— 作者 恩希
+------------------------------------------------------------------------
+
+assets/nini/ 里的每一个像素都是画师 恩希 原创的（身体 / 眼睛 / 发型 / 衣服 /
+鞋 / 头饰 / 尾巴），和 LPC 没有任何关系，按 CC-BY-SA 3.0 授权。
+用到这一包请署名「恩希」。
+
+  assets/nini/CREDITS.txt     逐件名单
+  assets/nini/LICENSES.md     授权与义务

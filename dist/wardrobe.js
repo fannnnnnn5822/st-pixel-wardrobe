@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.3.1';
+  var VERSION = '0.4.0';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -49,6 +49,31 @@
   if (ASSET_BASE.slice(-1) !== '/') ASSET_BASE += '/';
 
   /* ================================================================
+     素材包
+     加一个画师专区 = 在这张表里加一行（id 要和 assets/<id>/ 对上），别处都不用改：
+     顶栏那排药丸、切包、「上次穿的」分包记账、我的穿搭上那行小字，全是照这张表长出来的。
+       pill —— 顶栏药丸上那两三个字（位置窄）
+       name —— 说全名的地方（切包提示、我的穿搭的悬停说明…）
+     素材包自己的 index.json 里如果写了 packName / packPill，以素材包为准。
+     ================================================================ */
+  var PACKS = [
+    { id: 'female', pill: '女生', name: '女生版' },
+    { id: 'male',   pill: '男生', name: '男生版' },
+    { id: 'nini',   pill: '恩希', name: '恩希专区', author: '恩希' }
+  ];
+  var PACK_IDS = PACKS.map(function (p) { return p.id; });
+  function packOf(id) {
+    for (var i = 0; i < PACKS.length; i++) if (PACKS[i].id === id) return PACKS[i];
+    return PACKS[0];
+  }
+  function packName(id) {
+    return (IDX[id] && IDX[id].packName) || packOf(id).name;
+  }
+  function packPill(id) {
+    return (IDX[id] && IDX[id].packPill) || packOf(id).pill;
+  }
+
+  /* ================================================================
      分类 / 槽位
      ================================================================ */
   var TABS = [
@@ -64,12 +89,29 @@
   var TAB_NAME = {};
   TABS.forEach(function (t) { TAB_NAME[t.id] = t.name; });
 
+  // 这个包有哪几页、每页叫什么。素材包自己写了 tabs 就听它的
+  // （画师包的分页和 LPC 那两个包不一样：脸 / 发型 / 头饰 / 上装 / 下装 / 鞋 / 尾巴）
+  function tabsFor(pack) {
+    var idx = IDX[pack];
+    if (idx && idx.tabs && idx.tabs.length) {
+      return idx.tabs.filter(function (t) { return !!idx.byCat[t.id]; });
+    }
+    return TABS.filter(function (t) { return !idx || !!idx.byCat[t.id]; });
+  }
+  function tabName(id) {
+    if (id === 'fav') return '❤️ 收藏';
+    var list = tabsFor(S.pack);
+    for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i].name;
+    return TAB_NAME[id] || id;
+  }
+
   // 单品 id 的头一段决定它属于哪个分类文件
   function catOfId(id) {
     var head = String(id).split('.')[0];
     if (head === 'body' || head === 'head') return 'body';
     if (head === 'hair' || head === 'headwear' || head === 'torso' ||
-        head === 'legs' || head === 'feet' || head === 'hand') return head;
+        head === 'legs' || head === 'feet' || head === 'hand' ||
+        head === 'tail') return head;
     return null;
   }
 
@@ -81,7 +123,26 @@
      「全脱」只脱衣服；存穿搭 / 套装 / 随机一套也只管衣服。
      自绘的单品 id 长这样：<分类>.homemade.<名字> —— 中间那段就是标记。
      ──────────────────────────────────────────────────────────────── */
+  // 画师包的 id 长得不一样（脸那一页里既有身体眼睛，也有口罩眼镜这些衣服），
+  // 所以「哪些算长相 / 哪一格是身体 / 哪几格不能空」由素材包的 index.json 自己说：
+  //   person[] 算长相的　skin[] 哪件是身体　core[] 不能空的那几格
+  // 三条都不写就走 LPC 那两个包的老规矩。
+  function ruleHit(rules, id) {
+    id = String(id);
+    for (var i = 0; i < rules.length; i++) {
+      var r = rules[i];
+      if (r.id && r.id === id) return true;
+      if (r.prefix && id.indexOf(r.prefix) === 0) return true;
+    }
+    return false;
+  }
+  function packRules(key) {
+    var idx = IDX[S.pack];
+    return (idx && Array.isArray(idx[key]) && idx[key].length) ? idx[key] : null;
+  }
   function isPersonId(id) {
+    var r = packRules('person');
+    if (r) return ruleHit(r, id);
     id = String(id);
     if (id.indexOf('.homemade.') >= 0) return false;
     var h = id.split('.')[0];
@@ -89,10 +150,16 @@
   }
   // 身体和脸这两格永远不能空（空了娃娃就是一张飘着的脸 / 一堆没人穿的衣服）
   function isSkinId(id) {
+    var r = packRules('skin');
+    if (r) return ruleHit(r, id);
     return id === 'body.body' || String(id).indexOf('body.special.') === 0;
   }
   function isHeadId(id) { return String(id).indexOf('head.heads.') === 0; }
-  function isCoreId(id) { return isSkinId(id) || isHeadId(id); }
+  function isCoreId(id) {
+    var r = packRules('core');
+    if (r) return ruleHit(r, id);
+    return isSkinId(id) || isHeadId(id);
+  }
   function splitList(arr) {
     var p = [], c = [];
     (arr || []).forEach(function (o) { if (o && o.id) (isPersonId(o.id) ? p : c).push(o); });
@@ -146,8 +213,8 @@
                              'gloves', 'cuffs', 'harness'] },
     { label: '下身', slots: ['bottom', 'garter'] },
     { label: '鞋袜', slots: ['socks', 'stockings', 'shoes'] },
-    { label: '配饰', slots: ['hat', 'halo', 'glasses', 'eyepatch', 'mask', 'mouth', 'neck', 'charm',
-                             'headwear/accessories/earrings', 'back'] },
+    { label: '配饰', slots: ['hat', 'halo', 'glasses', 'eyepatch', 'mask', 'mouth', 'blush',
+                             'neck', 'charm', 'headwear/accessories/earrings', 'back'] },
     { label: '别的', slots: ['ears', 'wings', 'tail', 'horns'] },
     // plain = 不写「标签：」，直接连成一句话：手里拿着皮鞭
     { label: '手里拿着', slots: ['hand'], plain: true }
@@ -192,7 +259,7 @@
   }
   function loadGlobal() {
     var g = readGlobal();
-    if (g.pack === 'female' || g.pack === 'male') S.pack = g.pack;
+    if (PACK_IDS.indexOf(g.pack) >= 0) S.pack = g.pack;
     if (Array.isArray(g.favorites)) S.favorites = g.favorites.slice(0, 300);
     if (Array.isArray(g.outfits)) S.outfits = g.outfits.slice(0, 60);
     if (typeof g.ballHidden === 'boolean') S.ballHidden = g.ballHidden;
@@ -201,37 +268,38 @@
     if (g.pos && typeof g.pos.left === 'number') S.pos = g.pos;
     if (g.posNarrow && typeof g.posNarrow.left === 'number') S.posNarrow = g.posNarrow;
     if (g.panelPos && typeof g.panelPos.left === 'number') S.panelPos = g.panelPos;
-    // 上次穿的：两个包各记一套，新聊天默认接着这套穿
+    // 上次穿的：每个包各记一套，新聊天默认接着这套穿
     // last = 衣服，face = 长相（分开记，所以换一身衣服不会顺手把脸也换了）
-    S.last = { female: [], male: [] };
-    S.face = { female: [], male: [] };
-    if (g.last && typeof g.last === 'object') {
-      if (Array.isArray(g.last.female)) S.last.female = g.last.female;
-      if (Array.isArray(g.last.male)) S.last.male = g.last.male;
-    }
-    if (g.face && typeof g.face === 'object') {
-      if (Array.isArray(g.face.female)) S.face.female = g.face.female;
-      if (Array.isArray(g.face.male)) S.face.male = g.face.male;
-    }
+    S.last = {};
+    S.face = {};
+    PACK_IDS.forEach(function (p) {
+      S.last[p] = (g.last && Array.isArray(g.last[p])) ? g.last[p] : [];
+      S.face[p] = (g.face && Array.isArray(g.face[p])) ? g.face[p] : [];
+    });
     // 老版本（v0.1）把长相和衣服混在 last 里，这里就地分开
-    ['female', 'male'].forEach(function (p) {
+    PACK_IDS.forEach(function (p) {
       if (!S.face[p].length && S.last[p].length) {
         var s = splitList(S.last[p]);
         if (s.person.length) { S.face[p] = s.person; S.last[p] = s.clothes; }
       }
     });
   }
+  function emptyPacks() {
+    var o = {};
+    PACK_IDS.forEach(function (p) { o[p] = []; });
+    return o;
+  }
   // 「上次穿的」得在换包**之前**记进旧包名下，不然一换包就把新包的记录写成旧包那身
   function rememberOutfit() {
-    S.last = S.last || { female: [], male: [] };
-    S.face = S.face || { female: [], male: [] };
+    S.last = S.last || emptyPacks();
+    S.face = S.face || emptyPacks();
     if (S.clothes.length) S.last[S.pack] = S.clothes.slice();
     if (S.person.length) S.face[S.pack] = S.person.slice();
   }
   function saveGlobal() {
     try {
-      S.last = S.last || { female: [], male: [] };
-      S.face = S.face || { female: [], male: [] };
+      S.last = S.last || emptyPacks();
+      S.face = S.face || emptyPacks();
       updateVariablesWith(function (v) {
         v = v || {};
         v[GKEY] = {
@@ -532,13 +600,32 @@
     for (i = 0; i < it.v.length; i++) if (it.v[i][0] === it.def) return it.v[i];
     return it.v[0] || null;
   }
+  /* 有的单品图里带着肤色（画师包的眼睛，眼皮那一圈是皮肤），换了肤色它得跟着换。
+     清单里给这种标了 `sf:1`，格子按「<自己的颜色>@<肤色>」多存了几份，默认肤色那份
+     用光名字。**存进穿搭的永远是光名字**，只有画的时候才换成配对的那一份 ——
+     所以换肤色不用动穿搭，色块条上也还是只有 8 个眼色而不是 64 个组合。 */
+  function curSkinVariant() {
+    for (var i = 0; i < S.person.length; i++) {
+      if (isSkinId(S.person[i].id)) return S.person[i].v;
+    }
+    return null;
+  }
+  function resolveVariant(it, name) {
+    var v = variantOf(it, name);
+    if (!it || !it.sf || !v) return v;
+    var sk = curSkinVariant();
+    if (!sk) return v;
+    var want = String(v[0]).split('@')[0] + '@' + sk;
+    for (var i = 0; i < it.v.length; i++) if (it.v[i][0] === want) return it.v[i];
+    return v;
+  }
   // 把穿搭里用到的分类都拉下来（画娃娃要用）
   function ensureOutfitData(items) {
     var need = {};
     (items || []).forEach(function (o) { var c = catOfId(o.id); if (c) need[c] = 1; });
     var jobs = Object.keys(need).map(function (c) {
       return loadCat(S.pack, c).catch(function (e) {
-        toast('「' + (TAB_NAME[c] || c) + '」清单没下下来：' + (e.message || e), 'error');
+        toast('「' + tabName(c) + '」清单没下下来：' + (e.message || e), 'error');
         return null;
       });
     });
@@ -555,7 +642,7 @@
     var out = [];
     (items || []).forEach(function (o) {
       var it = itemById(o.id); if (!it) return;
-      var v = variantOf(it, o.v); if (!v) return;
+      var v = resolveVariant(it, o.v); if (!v) return;
       var a = atlasOf(S.pack, it.cat, v[3]); if (!a) return;
       v[2].forEach(function (cell, li) {
         if (cell === null || cell === undefined) return;
@@ -604,6 +691,9 @@
   var FULL = { x: 8, y: 2, w: 48, h: 62 };
   // 脸 / 头发 / 头饰这些格子里的东西很小，格子里也按半身像裁，不然看不清
   var BUST_TILE = { x: 14, y: 4, w: 36, h: 36 };
+  // 每个素材包的娃娃比例不一样（画师包头大、位置高、双马尾能甩到 x6），
+  // 取景框跟着素材包走 —— index.json 里的 bust / full
+  function fullCrop() { return (IDX[S.pack] && IDX[S.pack].full) || FULL; }
 
   var redrawTimer = null;
   function redrawSoon() {
@@ -946,7 +1036,9 @@
   }
 
   // 悬浮球画的是「当前这身」的半身像。裁 64×64 里这一块放大到球那么大。
+  // 这是 LPC 那两个包的框；画师包在自己的 index.json 里给（头大位置高，这个框会切掉头顶）
   var BUST = { x: 14, y: 6, w: 36, h: 36 };
+  function bustCrop() { return (IDX[S.pack] && IDX[S.pack].bust) || BUST; }
   function drawBall() {
     var b = DOC.getElementById(NS + '-ball'); if (!b) return;
     var L = layersFor(worn());
@@ -960,7 +1052,8 @@
     // 画到 2 倍再由 CSS 缩，边缘干净些
     cv.width = 124; cv.height = 124;
     var ctx = cv.getContext('2d'); if (!ctx) return;
-    var missing = paint(ctx, L, 124, 124, BUST.x, BUST.y, BUST.w, BUST.h);
+    var bu = bustCrop();
+    var missing = paint(ctx, L, 124, 124, bu.x, bu.y, bu.w, bu.h);
     b.classList.toggle('pw-loading', missing > 0);
   }
 
@@ -1047,8 +1140,11 @@
       '<div class="pw-head">' +
         '<span class="pw-title">👗 像素衣橱</span>' +
         '<span class="pw-packs">' +
-          '<button class="pw-pack" data-pack="female">女生</button>' +
-          '<button class="pw-pack" data-pack="male">男生</button>' +
+          PACKS.map(function (k) {
+            return '<button class="pw-pack" data-pack="' + k.id + '" title="' +
+              esc(k.name + (k.author ? '（画师 ' + k.author + '）' : '')) + '">' +
+              esc(k.pill) + '</button>';
+          }).join('') +
         '</span>' +
         '<button class="pw-gear" title="设置">⚙</button>' +
         '<button class="pw-x" title="收起">✕</button>' +
@@ -1193,19 +1289,24 @@
   }
 
   function switchPack(pack) {
-    if (pack !== 'female' && pack !== 'male') return;
+    if (PACK_IDS.indexOf(pack) < 0) return;
     if (pack === S.pack) return;
     rememberOutfit();            // 先把这身记在旧包名下
     S.pack = pack;
     S.sel = null;
     S.person = [];
     S.clothes = [];
+    // 换包必须换页：新包不一定有这一页（画师包没有「手持」，LPC 那两个包没有「尾巴」），
+    // 留在旧页上会看到一个空格子。
+    S.tab = 'body';
     saveGlobal();
     renderHead();
     boot().then(function () {
+      var list = tabsFor(S.pack);
+      if (list.length && !list.some(function (t) { return t.id === S.tab; })) S.tab = list[0].id;
       renderAll();
       openTab(S.tab);
-      toast(pack === 'female' ? '换成女生版衣橱了' : '换成男生版衣橱了', 'ok');
+      toast('换成' + packName(pack) + '了', 'ok');
     });
   }
 
@@ -1325,7 +1426,7 @@
     S.outfits.forEach(function (o, i) {
       var chip = DOC.createElement('span');
       chip.className = 'pw-chip';
-      chip.title = (o.pack === 'male' ? '男生版' : '女生版') + ' · ' + (o.items || []).length + ' 件';
+      chip.title = packName(o.pack || 'female') + ' · ' + (o.items || []).length + ' 件';
       var t = DOC.createElement('span');
       t.textContent = o.name;
       t.addEventListener('click', function () { wearSaved(i); });
@@ -1344,9 +1445,8 @@
   function renderTabs() {
     var host = q('.pw-tabs'); if (!host) return;
     host.innerHTML = '';
-    // 素材包里没有的分类就不显示那一页（男生版没有「手持」）
-    var idx = IDX[S.pack];
-    var list = TABS.filter(function (t) { return !idx || !!idx.byCat[t.id]; });
+    // 素材包里没有的分类就不显示那一页（男生版没有「手持」、画师包没有「头饰配饰」）
+    var list = tabsFor(S.pack);
     if (S.favorites.length) list.unshift({ id: 'fav', name: '❤️ 收藏' });
     list.forEach(function (t) {
       var b = DOC.createElement('button');
@@ -1389,7 +1489,8 @@
   }
   function drawDoll() {
     var cv = q('.pw-doll'); if (!cv) return;
-    drawInto(cv, worn(), FULL.w * 4, FULL.h * 4, FULL);
+    var f = fullCrop();
+    drawInto(cv, worn(), f.w * 4, f.h * 4, f);
   }
 
   // 颜色条：讲的是「现在选中的这件」，默认只给 10 个色，剩下的收在「更多颜色」里
@@ -1402,9 +1503,13 @@
     host.innerHTML = '';
     var worn = wornEntry(it.id);
     var cur = worn ? worn.v : it.def;
+    // hx = 这件东西的格子按「自己的颜色 × 肤色」存了好几份（画师包的眼睛），
+    // 摄色条只能给它自己那几个颜色，不能把 64 个组合摄出来
+    var chipList = it.chips || [];
+    if (it.hx) moreColors = false;
     var name = DOC.createElement('span');
     name.className = 'pw-cname';
-    name.textContent = it.n + ' 的颜色（' + it.v.length + ' 个）';
+    name.textContent = it.n + ' 的颜色（' + (it.hx ? chipList.length : it.v.length) + ' 个）';
     host.appendChild(name);
 
     var swatch = function (vn) {
@@ -1415,11 +1520,11 @@
       var cv = DOC.createElement('canvas');
       b.appendChild(cv);
       host.appendChild(b);
-      drawSwatch(cv, it, v);
+      drawSwatch(cv, it, resolveVariant(it, v[0]) || v);   // 画的时候配当前肤色
       b.addEventListener('click', function () { setColor(it, v[0]); });
     };
     if (!moreColors) {
-      (it.chips || []).forEach(swatch);
+      chipList.forEach(swatch);
     } else {
       // 展开时按配色板分组：莫兰迪 / 婚礼 / 原色，不然 48 个色块糊成一片
       var fams = (IDX[S.pack] && IDX[S.pack].colorFamilies) || [];
@@ -1444,7 +1549,7 @@
       }
       rest.forEach(swatch);
     }
-    if (it.v.length > (it.chips || []).length) {
+    if (!it.hx && it.v.length > chipList.length) {
       var more = DOC.createElement('button');
       more.className = 'pw-more';
       more.textContent = moreColors ? '收起颜色' : '更多颜色 ▾';
@@ -1510,7 +1615,7 @@
     host.innerHTML = '';
     var rows = listForTab();
     if (rows === null) {
-      host.innerHTML = '<div class="pw-empty">正在拿「' + esc(TAB_NAME[S.tab] || S.tab) + '」的素材…</div>';
+      host.innerHTML = '<div class="pw-empty">正在拿「' + esc(tabName(S.tab)) + '」的素材…</div>';
       return;
     }
     if (!rows.length) {
@@ -1545,7 +1650,8 @@
     tile.className = 'pw-tile';
     var worn = wornEntry(it.id);
     var vname = forceVariant || (worn ? worn.v : it.def);
-    var v = variantOf(it, vname);
+    var v = variantOf(it, vname);          // 身份（收藏 / 点一下穿上）用它自己那个名字
+    var vd = resolveVariant(it, vname) || v;   // 画的时候用配当前肤色的那一份
     if (worn) tile.classList.add('on');
 
     var cv = DOC.createElement('canvas');
@@ -1569,7 +1675,7 @@
 
     // 小预览：这件单品自己（不叠身体，看得清形状）
     if (v) {
-      var a = atlasOf(S.pack, it.cat, v[3]);
+      var a = atlasOf(S.pack, it.cat, vd[3]);
       if (a) {
         var crop = cropOf(it, (it.cat === 'body' || it.cat === 'hair' || it.cat === 'headwear')
           ? BUST_TILE : { x: 8, y: 2, w: 48, h: 48 });
@@ -1579,7 +1685,7 @@
           ctx.imageSmoothingEnabled = false;
           var im = img(S.pack, a.file);
           if (im) {
-            v[2].forEach(function (cell) {
+            vd[2].forEach(function (cell) {
               if (cell === null || cell === undefined) return;
               blitCell(ctx, im, cell, a.cols, crop.x, crop.y, crop.w, crop.h, 112, 112, it.dy || 0);
             });
@@ -1622,7 +1728,8 @@
     if (wornEntry(it.id)) {
       // 身体和脸不给脱 —— 换成别的一件可以，脱光只剩衣服不行
       if (isCoreId(it.id)) {
-        toast(isSkinId(it.id) ? '身体不能脱，换个肤色就行' : '脸不能脱，直接点另一张脸就换了', 'warn');
+        toast(isSkinId(it.id) ? '身体不能脱，换个肤色就行'
+                              : '「' + it.n + '」这一格不能空，直接点另一件就换了', 'warn');
         renderColors();
         return;
       }
@@ -1768,6 +1875,29 @@
 
   // 🙂 随机长相 —— 只摇人，衣服不动
   function randomFace() {
+    var idx = IDX[S.pack];
+    // 画师包：不能空的那几格（身体 / 眼睛）各摇一件 + 摇个发型。
+    // 走素材包给的规则，不去猜 LPC 那套 body.body / head.heads 的 id。
+    if (idx && Array.isArray(idx.core) && idx.core.length) {
+      withCats(['body', 'hair'], function () {
+        var out = [];
+        idx.core.forEach(function (rule) {
+          var cat = catOfId(rule.id || rule.prefix);
+          if (!cat) return;
+          var got = pickFrom(cat, function (it) { return ruleHit([rule], it.id); });
+          if (got) out.push(got);
+        });
+        var hair = pickFrom('hair', isSlot('hair'));
+        if (hair) out.push(hair);
+        if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
+        S.person = out;
+        S.sel = null;
+        afterOutfitChange();
+        renderGrid();
+        toast('换了张脸 —— 衣服没动', 'ok');
+      }, '随机长相');
+      return;
+    }
     withCats(['body', 'hair'], function () {
       var out = [];
       var skin = pickFrom('body', function (it) { return it.id === 'body.body'; });
@@ -1816,7 +1946,7 @@
     loadCat(S.pack, tab).then(function () {
       if (S.tab === tab) renderGrid();
     }, function (e) {
-      toast('「' + (TAB_NAME[tab] || tab) + '」没打开：' + (e.message || e), 'error');
+      toast('「' + tabName(tab) + '」没打开：' + (e.message || e), 'error');
       var host = q('.pw-grid');
       if (host) host.innerHTML = '<div class="pw-empty">素材没下下来。检查网络后重开衣橱。</div>';
     });
@@ -1840,6 +1970,17 @@
   // 身体和脸这两格永远不能空 —— 老存档、玩家手动删过、或者数据坏了，都在这儿兜住
   function ensurePerson(idx) {
     var d = defaultParts(idx).person;
+    // 素材包自己说了哪几格不能空就听它的（画师包 = 身体 + 眼睛，它没有「头」这件东西，
+    // 拿 LPC 的 head.heads.human.* 去补会补出一个这个包里根本不存在的 id）
+    if (idx && Array.isArray(idx.core) && idx.core.length) {
+      idx.core.forEach(function (rule) {
+        if (S.person.some(function (o) { return ruleHit([rule], o.id); })) return;
+        var got = null;
+        d.forEach(function (o) { if (!got && ruleHit([rule], o.id)) got = o; });
+        if (got) S.person.push(got);
+      });
+      return;
+    }
     var pick = function (test, fallback) {
       if (S.person.some(function (o) { return test(o.id); })) return;
       var got = null;
@@ -1997,7 +2138,7 @@
   boot();
   setTimeout(placeBall, 600);
   setTimeout(placeBall, 1600);
-  console.log('%c👗 像素衣橱 %cv' + VERSION + ' · ' + (S.pack === 'male' ? '男生版' : '女生版') +
+  console.log('%c👗 像素衣橱 %cv' + VERSION + ' · ' + packOf(S.pack).name +
     ' · 素材 ' + ASSET_BASE,
     'font-weight:700;color:#33131f;background:#f2a8c4;padding:3px 8px;border-radius:4px 0 0 4px',
     'color:#ddd;background:#1b1e25;padding:3px 8px;border-radius:0 4px 4px 0');
