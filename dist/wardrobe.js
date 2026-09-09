@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.3.0';
+  var VERSION = '0.3.1';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -383,9 +383,13 @@
     if (snapTimer) clearTimeout(snapTimer);
     snapTimer = setTimeout(function () { snapTimer = null; snapNow(); }, ms || 3000);
   }
+  // 视口够宽就开两栏（左娃娃右衣服）。用 class 不用 @media：面板宽度是 JS 设的，
+  // 媒体查询看的是视口，两边会对不上。
+  function WIDE() { return vpW() >= 900; }
   function placePanel() {
     var p = DOC.getElementById(NS + '-panel'); if (!p) return;
     recalib();
+    p.classList.toggle('pw-wide', WIDE());
     if (isNarrow()) {
       var bottom = inputTop();
       var pw = Math.min(430, vpW() - 10);
@@ -394,7 +398,9 @@
       p.style.height = (Math.max(340, bottom - 14) / CAL.sy) + 'px';
       p.style.maxHeight = 'none'; p.style.maxWidth = 'none';
     } else {
-      var w = Math.min(452, vpW() - 30), h = Math.min(700, vpH() - 80);
+      // 宽屏给足：~860 宽（封顶 92vw）× 86vh，衣服那一栏才装得下三四行
+      var w = WIDE() ? Math.min(860, vpW() * 0.92) : Math.min(452, vpW() - 30);
+      var h = WIDE() ? Math.min(vpH() * 0.86, vpH() - 40) : Math.min(700, vpH() - 80);
       p.style.width = (w / CAL.sx) + 'px';
       p.style.height = (h / CAL.sy) + 'px';
       p.style.maxHeight = ''; p.style.maxWidth = '';
@@ -743,11 +749,39 @@
     '}',
     '#' + NS + '-panel .pw-set .pw-hint{font-size:13px;color:var(--pw-dim);line-height:1.45}',
     '#' + NS + '-panel .pw-pill{border-radius:999px;padding:4px 14px;font-size:13px;min-width:52px}',
-    /* 套装 / 我的穿搭 两条 */
-    '#' + NS + '-panel .pw-saved,#' + NS + '-panel .pw-sets{',
-    '  display:flex;gap:6px;padding:8px 12px;overflow-x:auto;border-bottom:1px solid var(--pw-line);',
-    '  flex:0 0 auto;scrollbar-width:thin;align-items:center;',
+    /* ── 骨架：头 / 身（左右两栏）/ 脚。能伸缩的只有格子那一块 ── */
+    '#' + NS + '-panel .pw-body{',
+    '  flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;',
     '}',
+    '#' + NS + '-panel .pw-left{flex:0 0 auto;display:flex;flex-direction:column;min-height:0}',
+    '#' + NS + '-panel .pw-right{',
+    '  flex:1 1 auto;min-height:0;display:flex;flex-direction:column;overflow:hidden;',
+    '}',
+    /* 宽屏（≥900px 视口）：左栏 300px 放娃娃和穿搭，右栏整页衣服 */
+    '#' + NS + '-panel.pw-wide .pw-body{flex-direction:row}',
+    '#' + NS + '-panel.pw-wide .pw-left{',
+    '  flex:0 0 300px;width:300px;border-right:1px solid var(--pw-line);overflow-y:auto;',
+    '  scrollbar-width:thin;',
+    '}',
+    '#' + NS + '-panel.pw-wide .pw-stage{flex-direction:column;align-items:center;gap:8px}',
+    '#' + NS + '-panel.pw-wide .pw-side{width:100%}',
+    '#' + NS + '-panel.pw-wide .pw-doll{width:192px;height:248px}',   /* 真 4× */
+    '#' + NS + '-panel.pw-wide .pw-worn{max-height:none}',
+    '#' + NS + '-panel.pw-wide .pw-strips{flex-direction:column}',
+    '#' + NS + '-panel.pw-wide .pw-grid{grid-template-columns:repeat(auto-fill,minmax(82px,1fr))}',
+    /* 套装 / 我的穿搭：窄屏并成横着滚的一条，宽屏上下摞 */
+    '#' + NS + '-panel .pw-strips{',
+    '  flex:0 0 auto;display:flex;flex-direction:row;overflow-x:auto;scrollbar-width:thin;',
+    '  border-bottom:1px solid var(--pw-line);',
+    '}',
+    '#' + NS + '-panel .pw-saved,#' + NS + '-panel .pw-sets{',
+    '  display:flex;gap:6px;padding:6px 10px;flex:0 0 auto;align-items:center;',
+    '}',
+    /* 宽屏左栏底下本来就是空的：让套装换行铺开，别横着滚 */
+    '#' + NS + '-panel.pw-wide .pw-saved,#' + NS + '-panel.pw-wide .pw-sets{',
+    '  flex-wrap:wrap;overflow:visible;border-bottom:1px solid var(--pw-line);',
+    '}',
+    '#' + NS + '-panel.pw-wide .pw-strips{overflow:visible}',
     '#' + NS + '-panel .pw-striplabel{',
     '  font-size:13px;color:var(--pw-dim);align-self:center;flex:0 0 auto;padding-right:2px;',
     '}',
@@ -766,18 +800,18 @@
     '}',
     '#' + NS + '-panel .pw-saved .pw-del:hover{color:#ff8080;background:transparent;border:0}',
     /* 娃娃区 */
-    '#' + NS + '-panel .pw-stage{display:flex;gap:12px;padding:12px;flex:0 0 auto;align-items:flex-start}',
+    '#' + NS + '-panel .pw-stage{display:flex;gap:10px;padding:8px 10px;flex:0 0 auto;align-items:flex-start}',
     '#' + NS + '-panel .pw-doll{',
-    '  width:140px;height:180px;flex:0 0 auto;border-radius:12px;image-rendering:pixelated;',
+    '  width:144px;height:186px;flex:0 0 auto;border-radius:12px;image-rendering:pixelated;',
     '  image-rendering:crisp-edges;border:1px solid var(--pw-line);',
     '  background:',
     '   linear-gradient(45deg,#2c313d 25%,transparent 25%,transparent 75%,#2c313d 75%),',
     '   linear-gradient(45deg,#2c313d 25%,#252a34 25%,#252a34 75%,#2c313d 75%);',
     '  background-size:24px 24px;background-position:0 0,12px 12px;',
     '}',
-    '#' + NS + '-panel .pw-side{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:7px}',
+    '#' + NS + '-panel .pw-side{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:6px}',
     '#' + NS + '-panel .pw-worn{',
-    '  font-size:13px;color:var(--pw-dim);line-height:1.55;max-height:104px;overflow:auto;',
+    '  font-size:13px;color:var(--pw-dim);line-height:1.5;max-height:76px;overflow:auto;',
     '  word-break:break-word;',
     '}',
     '#' + NS + '-panel .pw-worn b{color:var(--pw-ink);font-weight:600}',
@@ -785,12 +819,13 @@
     '#' + NS + '-panel .pw-acts button{padding:6px 9px;font-size:14px}',
     /* 标签页 */
     '#' + NS + '-panel .pw-tabs{',
-    '  display:flex;gap:4px;padding:0 10px 8px;overflow-x:auto;flex:0 0 auto;scrollbar-width:thin;',
+    '  display:flex;gap:4px;padding:7px 10px 5px;overflow-x:auto;flex:0 0 auto;scrollbar-width:thin;',
     '}',
-    '#' + NS + '-panel .pw-tabs button{padding:6px 10px;font-size:14px}',
+    '#' + NS + '-panel .pw-tabs button{padding:5px 9px;font-size:14px}',
     '#' + NS + '-panel .pw-filter{',
-    '  display:flex;align-items:center;gap:6px;padding:0 12px 8px;flex:0 0 auto;flex-wrap:wrap;',
+    '  display:flex;align-items:center;gap:6px;padding:0 10px 6px;flex:0 0 auto;',
     '}',
+    '#' + NS + '-panel .pw-filter button{padding:4px 10px;font-size:13px}',
     '#' + NS + '-panel .pw-filter .pw-count{font-size:13px;color:var(--pw-dim);margin-left:auto}',
     /* NSFW 开关：平时是暗的一颗，开了才亮起来 */
     '#' + NS + '-panel .pw-nsfwbtn{',
@@ -800,10 +835,10 @@
     '#' + NS + '-panel .pw-nsfwbtn.on{',
     '  background:#5a2733;color:#ffd9e2;border-color:#a4485f;border-style:solid;font-weight:700;',
     '}',
-    /* 颜色条 */
+    /* 颜色条 —— 钉在格子下面（格子先吃满高度，它才排下去） */
     '#' + NS + '-panel .pw-colors{',
-    '  display:none;align-items:center;gap:6px;padding:8px 12px;flex:0 0 auto;flex-wrap:wrap;',
-    '  border-top:1px solid var(--pw-line);border-bottom:1px solid var(--pw-line);background:var(--pw-bg2);',
+    '  display:none;align-items:center;gap:6px;padding:7px 10px;flex:0 0 auto;flex-wrap:wrap;',
+    '  border-top:1px solid var(--pw-line);background:var(--pw-bg2);',
     /* 展开「更多颜色」时自己滚，别把下面那排按钮顶出面板 */
     '  max-height:104px;overflow-y:auto;align-content:flex-start;',
     '}',
@@ -815,10 +850,11 @@
     '#' + NS + '-panel .pw-sw canvas{width:100%;height:100%;display:block;image-rendering:pixelated}',
     '#' + NS + '-panel .pw-sw.on{border-color:var(--pw-acc);box-shadow:0 0 0 2px var(--pw-acc)}',
     '#' + NS + '-panel .pw-more{font-size:13px;padding:4px 9px}',
-    /* 单品格子 */
+    /* 单品格子 —— 整个面板里唯一「有多少给多少」的元素 */
     '#' + NS + '-panel .pw-grid{',
-    '  flex:1 1 auto;min-height:64px;overflow-y:auto;padding:10px 12px 12px;',
+    '  flex:1 1 auto;min-height:0;overflow-y:auto;padding:8px 10px 10px;',
     '  display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px;align-content:start;',
+    '  border-top:1px solid var(--pw-line);',
     '}',
     '#' + NS + '-panel .pw-tile{',
     '  background:var(--pw-bg2);border:1px solid var(--pw-line);border-radius:10px;padding:5px 3px 6px;',
@@ -841,8 +877,8 @@
     '#' + NS + '-panel .pw-group button{width:100%;text-align:left;font-size:14px;color:var(--pw-dim)}',
     /* 底部 */
     '#' + NS + '-panel .pw-foot{',
-    '  flex:0 0 auto;border-top:1px solid var(--pw-line);background:var(--pw-bg2);padding:9px 12px;',
-    '  display:flex;flex-direction:column;gap:7px;',
+    '  flex:0 0 auto;border-top:1px solid var(--pw-line);background:var(--pw-bg2);padding:8px 10px;',
+    '  display:flex;flex-direction:column;gap:6px;',
     '}',
     '#' + NS + '-panel .pw-plabel{display:none;font-size:13px;color:var(--pw-dim)}',
     '#' + NS + '-panel .pw-prompt{',
@@ -855,8 +891,13 @@
     '#' + NS + '-panel .pw-state{font-size:13px;color:var(--pw-dim);text-align:center}',
     '#' + NS + '-panel .pw-state.on{color:var(--pw-acc2)}',
     '@media (max-width:430px){',
-    '  #' + NS + '-panel .pw-doll{width:116px;height:150px}',
-    '  #' + NS + '-panel .pw-grid{grid-template-columns:repeat(auto-fill,minmax(68px,1fr))}',
+    /* 手机：娃娃缩到 3×，上面的东西全压扁，省下的高度全给格子 */
+    '  #' + NS + '-panel .pw-doll{width:144px;height:186px}',
+    '  #' + NS + '-panel .pw-stage{padding:6px 8px;gap:8px}',
+    '  #' + NS + '-panel .pw-worn{max-height:52px;font-size:12px}',
+    '  #' + NS + '-panel .pw-acts button{padding:5px 7px;font-size:13px}',
+    '  #' + NS + '-panel .pw-grid{grid-template-columns:repeat(auto-fill,minmax(68px,1fr));padding:6px 8px 8px}',
+    '  #' + NS + '-panel .pw-saved,#' + NS + '-panel .pw-sets{padding:5px 8px}',
     '}'
   ].join('\n');
 
@@ -1013,29 +1054,39 @@
         '<button class="pw-x" title="收起">✕</button>' +
       '</div>' +
       '<div class="pw-set"></div>' +
-      '<div class="pw-sets"></div>' +
-      '<div class="pw-saved"></div>' +
-      '<div class="pw-stage">' +
-        '<canvas class="pw-doll"></canvas>' +
-        '<div class="pw-side">' +
-          '<div class="pw-worn"></div>' +
-          '<div class="pw-acts">' +
-            '<button class="pw-random">🎲 随机一套</button>' +
-            '<button class="pw-face" title="只换长相，衣服不动">🙂 随机长相</button>' +
-            '<button class="pw-save">💾 存为一套</button>' +
-            '<button class="pw-strip">🧺 全脱</button>' +
+      /* 宽屏分两栏：左边娃娃 + 按钮 + 两条穿搭，右边整页衣服。
+         窄屏还是一条竖的，但让格子当那个"能伸缩"的元素 —— 上面的东西一律只占它该占的。 */
+      '<div class="pw-body">' +
+        '<div class="pw-left">' +
+          '<div class="pw-stage">' +
+            '<canvas class="pw-doll"></canvas>' +
+            '<div class="pw-side">' +
+              '<div class="pw-worn"></div>' +
+              '<div class="pw-acts">' +
+                '<button class="pw-random">🎲 随机一套</button>' +
+                '<button class="pw-face" title="只换长相，衣服不动">🙂 随机长相</button>' +
+                '<button class="pw-save">💾 存为一套</button>' +
+                '<button class="pw-strip">🧺 全脱</button>' +
+              '</div>' +
+            '</div>' +
+          '</div>' +
+          '<div class="pw-strips">' +
+            '<div class="pw-sets"></div>' +
+            '<div class="pw-saved"></div>' +
           '</div>' +
         '</div>' +
+        '<div class="pw-right">' +
+          '<div class="pw-tabs"></div>' +
+          '<div class="pw-filter">' +
+            '<button class="pw-tier" data-tier="featured">精选</button>' +
+            '<button class="pw-tier" data-tier="all">全部</button>' +
+            '<button class="pw-nsfwbtn" title="成人向小物（默认关着）">NSFW</button>' +
+            '<span class="pw-count"></span>' +
+          '</div>' +
+          '<div class="pw-grid"></div>' +
+          '<div class="pw-colors"></div>' +
+        '</div>' +
       '</div>' +
-      '<div class="pw-tabs"></div>' +
-      '<div class="pw-filter">' +
-        '<button class="pw-tier" data-tier="featured">精选</button>' +
-        '<button class="pw-tier" data-tier="all">全部</button>' +
-        '<button class="pw-nsfwbtn" title="成人向小物（默认关着）">NSFW</button>' +
-        '<span class="pw-count"></span>' +
-      '</div>' +
-      '<div class="pw-colors"></div>' +
-      '<div class="pw-grid"></div>' +
       '<div class="pw-foot">' +
         '<div class="pw-plabel">AI 会看到的穿搭描述</div>' +
         '<textarea class="pw-prompt" spellcheck="false"></textarea>' +
