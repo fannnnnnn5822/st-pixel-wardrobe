@@ -274,6 +274,20 @@ ORIGINAL SOURCE URLS
     1  https://opengameart.org/content/lpc-bandages
 
 ------------------------------------------------------------------------
+ORIGINAL ART IN THIS PACK (not from LPC)
+------------------------------------------------------------------------
+
+homemade/themed
+    像素衣橱自绘主题装（情趣内衣 / 猫女 / 女仆 / 兔女郎 / 水手服 / 旗袍 / 婚纱 / 睡裙 / 比基尼），画在 LPC 女性体型上，配色走 LPC 的 cloth 调色板。
+    authors  : 像素衣橱 (Pixel Wardrobe)
+    licenses : CC-BY-SA 3.0
+    url      : https://github.com/fannnnnnn5822/st-pixel-wardrobe
+
+These sprites were drawn for this project on the LPC female base and
+recoloured with the LPC cloth palette, so they are derivative works of
+LPC art and ship under the same CC-BY-SA 3.0 terms.
+
+------------------------------------------------------------------------
 PER-FILE CREDITS
 ------------------------------------------------------------------------
 

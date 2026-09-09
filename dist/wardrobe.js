@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.1.0';
+  var VERSION = '0.2.0';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -71,10 +71,39 @@
     return null;
   }
 
+  /* ────────────────────────────────────────────────────────────────
+     长相 vs 衣服
+     脸和身材捏好了就不该再变 —— 所以状态分成两半：
+       长相（person）= 肤色 / 头 / 五官 / 耳朵角 / 头发
+       衣服（clothes）= 其余全部（含自绘主题装里的猫尾、项圈这些）
+     「全脱」只脱衣服；存穿搭 / 套装 / 随机一套也只管衣服。
+     自绘的单品 id 长这样：<分类>.homemade.<名字> —— 中间那段就是标记。
+     ──────────────────────────────────────────────────────────────── */
+  function isPersonId(id) {
+    id = String(id);
+    if (id.indexOf('.homemade.') >= 0) return false;
+    var h = id.split('.')[0];
+    return h === 'body' || h === 'head' || h === 'hair';
+  }
+  // 身体和脸这两格永远不能空（空了娃娃就是一张飘着的脸 / 一堆没人穿的衣服）
+  function isSkinId(id) {
+    return id === 'body.body' || String(id).indexOf('body.special.') === 0;
+  }
+  function isHeadId(id) { return String(id).indexOf('head.heads.') === 0; }
+  function isCoreId(id) { return isSkinId(id) || isHeadId(id); }
+  function splitList(arr) {
+    var p = [], c = [];
+    (arr || []).forEach(function (o) { if (o && o.id) (isPersonId(o.id) ? p : c).push(o); });
+    return { person: p, clothes: c };
+  }
+  function worn() { return S.person.concat(S.clothes); }
+  function listOfId(id) { return isPersonId(id) ? 'person' : 'clothes'; }
+
   // 同一个槽位一次只能穿一件（换一件 = 脱掉上一件）。
   // 滚边 / 袖子 / 帽饰这类「叠层件」不占槽位，可以和本体一起穿。
   var OVERLAY_RE = /(trim|overlay|sleeves|feather|skull|cockade|stitch|thatch|buckle|knot|rune|second color|buttons|collar|lapel|lace|dots|edge)/i;
   function slotOf(it) {
+    if (it.slot) return it.slot;      // 自绘主题装自己写死了槽位，不用靠子分类猜
     var tn = it.tn || '';
     if (/(trim|sleeves)/.test(tn) || OVERLAY_RE.test(it.en || '')) return 'ov:' + it.id;
     // 上游的 type_name 比目录名靠谱：紧身胸衣裙挂在 dresses/ 底下，但它其实是件背心，
@@ -111,9 +140,10 @@
   // 出词的时候按这个分组、这个顺序（肤色/五官不进词）
   var PROMPT_GROUPS = [
     { label: '发型', slots: ['hair', 'hairext', 'beard', 'stache'] },
-    { label: '上身', slots: ['dress', 'top', 'vest', 'jacket', 'apron', 'armour', 'cape', 'belt'] },
-    { label: '下身', slots: ['bottom'] },
-    { label: '鞋袜', slots: ['socks', 'shoes'] },
+    { label: '上身', slots: ['dress', 'top', 'vest', 'jacket', 'apron', 'armour', 'cape', 'belt',
+                             'gloves', 'cuffs'] },
+    { label: '下身', slots: ['bottom', 'garter'] },
+    { label: '鞋袜', slots: ['socks', 'stockings', 'shoes'] },
     { label: '配饰', slots: ['hat', 'glasses', 'eyepatch', 'mask', 'neck', 'charm',
                              'headwear/accessories/earrings', 'back'] },
     { label: '别的', slots: ['ears', 'wings', 'tail', 'horns'] }
@@ -132,7 +162,10 @@
     tier: 'featured',        // 'featured' | 'all'
     fantasyOpen: false,
     sel: null,               // 颜色条现在在讲哪件
-    outfit: [],              // [{id, v}]
+    person: [],              // [{id, v}] 长相：肤色 / 脸 / 五官 / 头发（换衣服不动它）
+    clothes: [],             // [{id, v}] 衣服：其余全部
+    sets: [],                // 官方套装（素材包带的）
+    setPerson: [],           // 上一套套装往「长相」里塞过的东西（换套装时先撤掉）
     prompt: '',
     promptEdited: false,
     injected: false,
@@ -163,20 +196,36 @@
     if (g.posNarrow && typeof g.posNarrow.left === 'number') S.posNarrow = g.posNarrow;
     if (g.panelPos && typeof g.panelPos.left === 'number') S.panelPos = g.panelPos;
     // 上次穿的：两个包各记一套，新聊天默认接着这套穿
+    // last = 衣服，face = 长相（分开记，所以换一身衣服不会顺手把脸也换了）
     S.last = { female: [], male: [] };
+    S.face = { female: [], male: [] };
     if (g.last && typeof g.last === 'object') {
       if (Array.isArray(g.last.female)) S.last.female = g.last.female;
       if (Array.isArray(g.last.male)) S.last.male = g.last.male;
     }
+    if (g.face && typeof g.face === 'object') {
+      if (Array.isArray(g.face.female)) S.face.female = g.face.female;
+      if (Array.isArray(g.face.male)) S.face.male = g.face.male;
+    }
+    // 老版本（v0.1）把长相和衣服混在 last 里，这里就地分开
+    ['female', 'male'].forEach(function (p) {
+      if (!S.face[p].length && S.last[p].length) {
+        var s = splitList(S.last[p]);
+        if (s.person.length) { S.face[p] = s.person; S.last[p] = s.clothes; }
+      }
+    });
   }
   // 「上次穿的」得在换包**之前**记进旧包名下，不然一换包就把新包的记录写成旧包那身
   function rememberOutfit() {
     S.last = S.last || { female: [], male: [] };
-    if (S.outfit.length) S.last[S.pack] = S.outfit.slice();
+    S.face = S.face || { female: [], male: [] };
+    if (S.clothes.length) S.last[S.pack] = S.clothes.slice();
+    if (S.person.length) S.face[S.pack] = S.person.slice();
   }
   function saveGlobal() {
     try {
       S.last = S.last || { female: [], male: [] };
+      S.face = S.face || { female: [], male: [] };
       updateVariablesWith(function (v) {
         v = v || {};
         v[GKEY] = {
@@ -184,6 +233,7 @@
           favorites: S.favorites,
           outfits: S.outfits,
           last: S.last,
+          face: S.face,
           ballHidden: S.ballHidden,
           snap: S.snap,
           pos: S.pos, posNarrow: S.posNarrow, panelPos: S.panelPos,
@@ -208,7 +258,7 @@
         v = v || {};
         v[GKEY] = v[GKEY] || {};
         v[GKEY].outfit = {
-          pack: S.pack, items: S.outfit,
+          pack: S.pack, items: S.clothes, person: S.person,
           prompt: S.promptEdited ? S.prompt : '',
           on: S.injected, ts: Date.now()
         };
@@ -498,12 +548,24 @@
         if (cell === null || cell === undefined) return;
         out.push({
           z: it.z[li],
+          dy: it.dy || 0,
           file: a.file, cols: a.cols, cell: cell
         });
       });
     });
     out.sort(function (a, b) { return a.z - b.z; });
     return out;
+  }
+  /* 画一格。dy 是这一层的纵向位移（负 = 往上，给身体上新长的脖子让位）。
+     位移必须**在格子里裁着画**：源矩形夹在 64×64 的格边界内，超出的几行让目标端
+     空着 —— 直接把源矩形挪出格子会把图集里相邻格子的像素蹭进来。 */
+  function blitCell(ctx, im, cell, cols, sx, sy, sw, sh, w, h, dy) {
+    var cx = (cell % cols) * CELL, cy = ((cell / cols) | 0) * CELL;
+    var scale = h / sh;
+    var s0 = sy - (dy || 0), s1 = s0 + sh;
+    var a = Math.max(0, s0), b = Math.min(CELL, s1);
+    if (b - a <= 0) return;
+    ctx.drawImage(im, cx + sx, cy + a, sw, b - a, 0, (a - s0) * scale, w, (b - a) * scale);
   }
   function paint(ctx, layers, w, h, sx, sy, sw, sh) {
     ctx.imageSmoothingEnabled = false;
@@ -512,9 +574,8 @@
     layers.forEach(function (L) {
       var im = img(S.pack, L.file);
       if (!im) { missing++; return; }
-      var cx = (L.cell % L.cols) * CELL, cy = ((L.cell / L.cols) | 0) * CELL;
       // 只画 (sx,sy,sw,sh) 那块，铺满整张 canvas —— 悬浮球的半身像靠这个
-      ctx.drawImage(im, cx + sx, cy + sy, sw, sh, 0, 0, w, h);
+      blitCell(ctx, im, L.cell, L.cols, sx, sy, sw, sh, w, h, L.dy);
     });
     return missing;
   }
@@ -542,11 +603,13 @@
      ================================================================ */
   function wornSorted() {
     var rows = [];
-    S.outfit.forEach(function (o) {
+    worn().forEach(function (o) {
       var it = itemById(o.id); if (!it) return;
       if (SKIP_SUB.test(it.sub || '')) return;
       var v = variantOf(it, o.v);
       var color = (v && !NO_COLOR_WORD[v[0]]) ? v[1] : '';
+      // 单字色名补个「色」：黑女仆连衣裙 → 黑色女仆连衣裙
+      if (color.length === 1) color += '色';
       rows.push({ slot: slotOf(it), sub: it.sub, word: color + it.n, it: it });
     });
     return rows;
@@ -668,11 +731,19 @@
     '}',
     '#' + NS + '-panel .pw-set .pw-hint{font-size:13px;color:var(--pw-dim);line-height:1.45}',
     '#' + NS + '-panel .pw-pill{border-radius:999px;padding:4px 14px;font-size:13px;min-width:52px}',
-    /* 我的穿搭 */
-    '#' + NS + '-panel .pw-saved{',
+    /* 套装 / 我的穿搭 两条 */
+    '#' + NS + '-panel .pw-saved,#' + NS + '-panel .pw-sets{',
     '  display:flex;gap:6px;padding:8px 12px;overflow-x:auto;border-bottom:1px solid var(--pw-line);',
-    '  flex:0 0 auto;scrollbar-width:thin;',
+    '  flex:0 0 auto;scrollbar-width:thin;align-items:center;',
     '}',
+    '#' + NS + '-panel .pw-striplabel{',
+    '  font-size:13px;color:var(--pw-dim);align-self:center;flex:0 0 auto;padding-right:2px;',
+    '}',
+    '#' + NS + '-panel .pw-setchip{',
+    '  flex:0 0 auto;border-radius:999px;padding:4px 12px;font-size:14px;',
+    '  background:#2f2733;border-color:#4a3a46;color:#f4dfe8;',
+    '}',
+    '#' + NS + '-panel .pw-setchip:hover{background:var(--pw-acc);color:#33131f;border-color:var(--pw-acc)}',
     '#' + NS + '-panel .pw-saved .pw-chip{',
     '  display:flex;align-items:center;gap:5px;background:var(--pw-bg2);border:1px solid var(--pw-line);',
     '  border-radius:999px;padding:4px 6px 4px 11px;font-size:14px;cursor:pointer;flex:0 0 auto;',
@@ -759,8 +830,8 @@
     '  background:var(--pw-bg);color:var(--pw-ink);border:1px solid var(--pw-line);border-radius:8px;padding:8px;',
     '}',
     '#' + NS + '-panel .pw-footrow{display:flex;gap:6px;align-items:center}',
-    '#' + NS + '-panel .pw-piu{flex:1 1 auto;background:var(--pw-acc);color:#33131f;border-color:var(--pw-acc);font-weight:700;font-size:15px;padding:9px}',
-    '#' + NS + '-panel .pw-piu:hover{filter:brightness(1.08);color:#33131f}',
+    '#' + NS + '-panel .pw-go{flex:1 1 auto;background:var(--pw-acc);color:#33131f;border-color:var(--pw-acc);font-weight:700;font-size:15px;padding:9px}',
+    '#' + NS + '-panel .pw-go:hover{filter:brightness(1.08);color:#33131f}',
     '#' + NS + '-panel .pw-state{font-size:13px;color:var(--pw-dim);text-align:center}',
     '#' + NS + '-panel .pw-state.on{color:var(--pw-acc2)}',
     '@media (max-width:430px){',
@@ -817,7 +888,7 @@
   var BUST = { x: 14, y: 6, w: 36, h: 36 };
   function drawBall() {
     var b = DOC.getElementById(NS + '-ball'); if (!b) return;
-    var L = layersFor(S.outfit);
+    var L = layersFor(worn());
     if (!L.length) {                       // 素材还没到 / 什么都没穿 → 先挂个 👗
       if (!b.querySelector('.pw-fallback')) b.innerHTML = '<span class="pw-fallback">👗</span>';
       b.classList.toggle('pw-loading', loading > 0);
@@ -922,6 +993,7 @@
         '<button class="pw-x" title="收起">✕</button>' +
       '</div>' +
       '<div class="pw-set"></div>' +
+      '<div class="pw-sets"></div>' +
       '<div class="pw-saved"></div>' +
       '<div class="pw-stage">' +
         '<canvas class="pw-doll"></canvas>' +
@@ -929,6 +1001,7 @@
           '<div class="pw-worn"></div>' +
           '<div class="pw-acts">' +
             '<button class="pw-random">🎲 随机一套</button>' +
+            '<button class="pw-face" title="只换长相，衣服不动">🙂 随机长相</button>' +
             '<button class="pw-save">💾 存为一套</button>' +
             '<button class="pw-strip">🧺 全脱</button>' +
           '</div>' +
@@ -947,7 +1020,7 @@
         '<textarea class="pw-prompt" spellcheck="false"></textarea>' +
         '<div class="pw-footrow">' +
           '<button class="pw-edit" title="改一下要插进去的话">✎ 改词</button>' +
-          '<button class="pw-piu">穿好了</button>' +
+          '<button class="pw-go">穿好了</button>' +
           '<button class="pw-off" title="撤掉注入">脱下</button>' +
         '</div>' +
         '<div class="pw-state"></div>' +
@@ -1006,12 +1079,15 @@
       });
     });
     p.querySelector('.pw-random').addEventListener('click', randomOutfit);
+    p.querySelector('.pw-face').addEventListener('click', randomFace);
     p.querySelector('.pw-save').addEventListener('click', saveCurrentOutfit);
     p.querySelector('.pw-strip').addEventListener('click', function () {
-      S.outfit = [];
+      // 只脱衣服。脸和身材捏好了就不该被一个按钮清掉。
+      if (!S.clothes.length) { toast('已经什么都没穿了', 'warn'); return; }
+      S.clothes = [];
       S.sel = null;
       afterOutfitChange();
-      toast('全脱了（肤色和脸也没了，随手点一件穿回来）', 'warn');
+      toast('衣服全脱了 —— 肤色、脸、头发都还在', 'warn');
     });
     p.querySelector('.pw-edit').addEventListener('click', function () {
       var ta = q('.pw-prompt'), lab = q('.pw-plabel');
@@ -1026,7 +1102,7 @@
       S.promptEdited = true;
       saveChatOutfit();
     });
-    p.querySelector('.pw-piu').addEventListener('click', function () {
+    p.querySelector('.pw-go').addEventListener('click', function () {
       syncPrompt();
       if (doInject()) { saveChatOutfit(); renderState(); }
     });
@@ -1043,7 +1119,8 @@
     rememberOutfit();            // 先把这身记在旧包名下
     S.pack = pack;
     S.sel = null;
-    S.outfit = [];
+    S.person = [];
+    S.clothes = [];
     saveGlobal();
     renderHead();
     boot().then(function () {
@@ -1058,6 +1135,7 @@
      ================================================================ */
   function renderAll() {
     renderHead();
+    renderSets();
     renderSaved();
     renderTabs();
     renderFilter();
@@ -1102,13 +1180,65 @@
     });
   }
 
+  // 官方套装：一按换一整套衣服。里头如果带了「长相」件（猫女那对猫耳），
+  // 只换掉对应那一格，肤色 / 脸 / 发型一律不动。
+  function renderSets() {
+    var host = q('.pw-sets'); if (!host) return;
+    host.innerHTML = '';
+    if (!S.sets.length) { host.style.display = 'none'; return; }
+    host.style.display = 'flex';
+    var lab = DOC.createElement('span');
+    lab.className = 'pw-striplabel';
+    lab.textContent = '套装';
+    host.appendChild(lab);
+    S.sets.forEach(function (s, i) {
+      var chip = DOC.createElement('button');
+      chip.className = 'pw-setchip';
+      chip.textContent = s.name;
+      chip.title = '一键换上「' + s.name + '」（' + (s.items || []).length + ' 件，脸和发型不动）';
+      chip.addEventListener('click', function () { wearSet(i); });
+      host.appendChild(chip);
+    });
+  }
+  function wearSet(i) {
+    var s = S.sets[i]; if (!s) return;
+    var list = (s.items || []).map(function (o) { return { id: o.item, v: o.variant }; });
+    var parts = splitList(list);
+    S.clothes = parts.clothes;
+    S.sel = null;
+    // 上一套套装塞进「长相」里的东西（猫耳这种）先撤掉，换女仆的时候别还顶着猫耳。
+    // 玩家自己挑的耳朵不在这张单子里，不会被误伤。
+    var prev = S.setPerson || [];
+    if (prev.length) {
+      S.person = S.person.filter(function (o) {
+        return isCoreId(o.id) || prev.indexOf(o.id) < 0;
+      });
+    }
+    S.setPerson = parts.person.map(function (o) { return o.id; });
+    ensureOutfitData(list.concat(S.person)).then(function () {
+      parts.person.forEach(function (o) {
+        var it = itemById(o.id);
+        if (!it) { S.person.push(o); return; }
+        var sl = slotOf(it);
+        S.person = S.person.filter(function (p) {
+          var pi = itemById(p.id);
+          return !pi || slotOf(pi) !== sl;
+        });
+        S.person.push(o);
+      });
+      afterOutfitChange();
+      renderGrid();
+      toast('换上「' + s.name + '」了', 'ok');
+    });
+  }
+
   function renderSaved() {
     var host = q('.pw-saved'); if (!host) return;
     host.innerHTML = '';
     if (!S.outfits.length) { host.style.display = 'none'; return; }
     host.style.display = 'flex';
     var lab = DOC.createElement('span');
-    lab.style.cssText = 'font-size:13px;color:var(--pw-dim);align-self:center;flex:0 0 auto;padding-right:2px';
+    lab.className = 'pw-striplabel';
     lab.textContent = '我的穿搭';
     host.appendChild(lab);
     S.outfits.forEach(function (o, i) {
@@ -1169,7 +1299,7 @@
   }
   function drawDoll() {
     var cv = q('.pw-doll'); if (!cv) return;
-    drawInto(cv, S.outfit, FULL.w * 4, FULL.h * 4, FULL);
+    drawInto(cv, worn(), FULL.w * 4, FULL.h * 4, FULL);
   }
 
   // 颜色条：讲的是「现在选中的这件」，默认只给 10 个色，剩下的收在「更多颜色」里
@@ -1244,17 +1374,23 @@
     legs:     { x: 23, y: 38, w: 18, h: 18 },
     feet:     { x: 21, y: 47, w: 22, h: 15 }
   };
+  // 有的单品（猫尾、项圈、吊带袜…）不在它那一类的默认取景框里，清单里自带 cr
+  function cropOf(it, fallback) {
+    if (it.cr && it.cr.length === 4) {
+      return { x: it.cr[0], y: it.cr[1], w: it.cr[2], h: it.cr[3] };
+    }
+    return fallback;
+  }
   function drawSwatch(cv, it, v) {
     var a = atlasOf(S.pack, it.cat, v[3]); if (!a) return;
     cv.width = 60; cv.height = 60;
     var ctx = cv.getContext('2d'); if (!ctx) return;
     ctx.imageSmoothingEnabled = false;
     var im = img(S.pack, a.file); if (!im) return;
-    var c = SWATCH_CROP[it.cat] || { x: 16, y: 14, w: 32, h: 32 };
+    var c = cropOf(it, SWATCH_CROP[it.cat] || { x: 16, y: 14, w: 32, h: 32 });
     v[2].forEach(function (cell) {
       if (cell === null || cell === undefined) return;
-      var cx = (cell % a.cols) * CELL, cy = ((cell / a.cols) | 0) * CELL;
-      ctx.drawImage(im, cx + c.x, cy + c.y, c.w, c.h, 0, 0, 60, 60);
+      blitCell(ctx, im, cell, a.cols, c.x, c.y, c.w, c.h, 60, 60, it.dy || 0);
     });
   }
 
@@ -1344,8 +1480,8 @@
     if (v) {
       var a = atlasOf(S.pack, it.cat, v[3]);
       if (a) {
-        var crop = (it.cat === 'body' || it.cat === 'hair' || it.cat === 'headwear')
-          ? BUST_TILE : { x: 8, y: 2, w: 48, h: 48 };
+        var crop = cropOf(it, (it.cat === 'body' || it.cat === 'hair' || it.cat === 'headwear')
+          ? BUST_TILE : { x: 8, y: 2, w: 48, h: 48 });
         cv.width = 112; cv.height = 112;
         var ctx = cv.getContext('2d');
         if (ctx) {
@@ -1354,8 +1490,7 @@
           if (im) {
             v[2].forEach(function (cell) {
               if (cell === null || cell === undefined) return;
-              var cx = (cell % a.cols) * CELL, cy = ((cell / a.cols) | 0) * CELL;
-              ctx.drawImage(im, cx + crop.x, cy + crop.y, crop.w, crop.h, 0, 0, 112, 112);
+              blitCell(ctx, im, cell, a.cols, crop.x, crop.y, crop.w, crop.h, 112, 112, it.dy || 0);
             });
           }
         }
@@ -1368,24 +1503,40 @@
      动作
      ================================================================ */
   function wornEntry(id) {
-    for (var i = 0; i < S.outfit.length; i++) if (S.outfit[i].id === id) return S.outfit[i];
+    var all = worn();
+    for (var i = 0; i < all.length; i++) if (all[i].id === id) return all[i];
     return null;
   }
+  // 穿一件：把同槽位（以及它挤掉的那些槽位）的先脱了。长相进 person，衣服进 clothes。
   function wear(it, vname) {
     var slot = slotOf(it);
-    var kick = [slot].concat(EXCLUDES[slot] || []);
-    S.outfit = S.outfit.filter(function (o) {
+    var kick = [slot].concat(EXCLUDES[slot] || []).concat(it.excl || []);
+    var key = listOfId(it.id);
+    var keep = function (o) {
       if (o.id === it.id) return false;
       var other = itemById(o.id);
       return !other || kick.indexOf(slotOf(other)) < 0;
-    });
-    S.outfit.push({ id: it.id, v: vname || it.def });
+    };
+    S.person = S.person.filter(keep);
+    S.clothes = S.clothes.filter(keep);
+    S[key].push({ id: it.id, v: vname || it.def });
+  }
+  function removeWorn(id) {
+    S.person = S.person.filter(function (o) { return o.id !== id; });
+    S.clothes = S.clothes.filter(function (o) { return o.id !== id; });
   }
   function tapItem(it, vname) {
     S.sel = it.id;
     moreColors = false;
-    if (wornEntry(it.id)) S.outfit = S.outfit.filter(function (o) { return o.id !== it.id; });
-    else wear(it, vname);
+    if (wornEntry(it.id)) {
+      // 身体和脸不给脱 —— 换成别的一件可以，脱光只剩衣服不行
+      if (isCoreId(it.id)) {
+        toast(isSkinId(it.id) ? '身体不能脱，换个肤色就行' : '脸不能脱，直接点另一张脸就换了', 'warn');
+        renderColors();
+        return;
+      }
+      removeWorn(it.id);
+    } else wear(it, vname);
     afterOutfitChange();
   }
   function setColor(it, vname) {
@@ -1428,7 +1579,7 @@
   }
 
   function saveCurrentOutfit() {
-    if (!S.outfit.length) { toast('身上什么都没有，没法存', 'warn'); return; }
+    if (!S.clothes.length) { toast('身上什么衣服都没有，没法存', 'warn'); return; }
     var name;
     try { name = VIEW.prompt('给这套穿搭起个名字（比如 约会装 / 睡衣）', suggestName()); }
     catch (e) { name = null; }
@@ -1437,7 +1588,8 @@
     if (!name) { toast('名字空的，没存', 'warn'); return; }
     var idx = -1, i;
     for (i = 0; i < S.outfits.length; i++) if (S.outfits[i].name === name) { idx = i; break; }
-    var rec = { name: name, pack: S.pack, items: S.outfit.slice(), ts: Date.now() };
+    // 存的只有衣服 —— 换一套穿搭不该顺手把脸也换掉
+    var rec = { name: name, pack: S.pack, items: S.clothes.slice(), ts: Date.now() };
     if (idx >= 0) S.outfits[idx] = rec;
     else {
       if (S.outfits.length >= 60) { toast('我的穿搭最多 60 套，先删几套', 'warn'); return; }
@@ -1454,78 +1606,99 @@
   function wearSaved(i) {
     var o = S.outfits[i]; if (!o) return;
     var apply = function () {
-      S.outfit = (o.items || []).slice();
+      // 老版本存的穿搭里可能混着长相，只取衣服那半
+      S.clothes = splitList(o.items || []).clothes;
       S.sel = null;
-      ensureOutfitData(S.outfit).then(function () {
+      ensureOutfitData(worn()).then(function () {
         afterOutfitChange();
-        toast('换上「' + o.name + '」了', 'ok');
+        renderGrid();
+        toast('换上「' + o.name + '」了（脸没动）', 'ok');
       });
     };
     if (o.pack && o.pack !== S.pack) {
       rememberOutfit();
       S.pack = o.pack;
-      S.outfit = [];
+      S.person = [];
+      S.clothes = [];
       saveGlobal();
       renderHead();
       boot().then(apply);
     } else apply();
   }
 
-  function randomOutfit() {
-    var need = ['body', 'hair', 'torso', 'legs', 'feet'];
+  // 摇一件：从这一类的精选里挑
+  function pickFrom(cat, pred) {
+    var c = CATS[S.pack + '/' + cat]; if (!c) return null;
+    var pool = c.items.filter(function (it) {
+      return it.tier === 'featured' && (it.aud === 'both' || it.aud === S.pack) && pred(it);
+    });
+    if (!pool.length) return null;
+    var it = pool[(Math.random() * pool.length) | 0];
+    var chips = (it.chips && it.chips.length) ? it.chips : [it.def];
+    return { id: it.id, v: chips[(Math.random() * chips.length) | 0] };
+  }
+  function isSlot(want) {
+    return function (it) { return slotOf(it) === want; };
+  }
+  function withCats(need, fn, what) {
     loading++;
-    Promise.all(need.map(function (c) { return loadCat(S.pack, c).catch(function () { return null; }); }))
-      .then(function () {
-        loading--;
-        var pick = function (cat, pred) {
-          var c = CATS[S.pack + '/' + cat]; if (!c) return null;
-          var pool = c.items.filter(function (it) {
-            return it.tier === 'featured' && (it.aud === 'both' || it.aud === S.pack) && pred(it);
-          });
-          if (!pool.length) return null;
-          var it = pool[(Math.random() * pool.length) | 0];
-          var chips = (it.chips && it.chips.length) ? it.chips : [it.def];
-          return { id: it.id, v: chips[(Math.random() * chips.length) | 0] };
-        };
-        var isSlot = function (want) {
-          return function (it) { return slotOf(it) === want; };
-        };
-        var out = [];
-        var skin = pick('body', function (it) { return it.id === 'body.body'; });
-        // 肤色和脸得同色，不然脖子会花
-        if (skin) out.push(skin);
-        var head = pick('body', isSlot('head'));
-        if (head && skin) head.v = skin.v;
-        if (head) out.push(head);
-        var brows = pick('body', function (it) { return (it.sub || '') === 'head/eyebrows'; });
-        [pick('hair', isSlot('hair')),
-         brows,
-         pick('torso', function (it) { return slotOf(it) === 'top' || slotOf(it) === 'dress'; }),
-         pick('legs', isSlot('bottom')),
-         pick('feet', isSlot('shoes'))].forEach(function (x) { if (x) out.push(x); });
-        // 连衣裙就别再套裙子了
-        var hasDress = out.some(function (o) {
-          var it = itemById(o.id); return it && slotOf(it) === 'dress';
-        });
-        if (hasDress && Math.random() < 0.6) {
-          out = out.filter(function (o) {
-            var it = itemById(o.id); return !it || slotOf(it) !== 'bottom';
-          });
-        }
-        if (brows && skin) {
-          // 眉毛用发色更自然
-          var h = out.filter(function (o) { var it = itemById(o.id); return it && slotOf(it) === 'hair'; })[0];
-          if (h) brows.v = h.v;
-        }
-        if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
-        S.outfit = out;
-        S.sel = null;
-        afterOutfitChange();
-        renderGrid();
-      }, function () {
-        loading--;
-        toast('随机失败：素材没下下来', 'error');
+    Promise.all(need.map(function (c) {
+      return loadCat(S.pack, c).catch(function () { return null; });
+    })).then(function () { loading--; fn(); }, function () {
+      loading--;
+      toast((what || '随机') + '失败：素材没下下来', 'error');
+    });
+  }
+
+  // 🎲 随机一套 —— 只摇衣服，脸和发型原样留着
+  function randomOutfit() {
+    withCats(['torso', 'legs', 'feet'], function () {
+      var out = [];
+      [pickFrom('torso', function (it) { return slotOf(it) === 'top' || slotOf(it) === 'dress'; }),
+       pickFrom('legs', isSlot('bottom')),
+       pickFrom('feet', isSlot('shoes'))].forEach(function (x) { if (x) out.push(x); });
+      // 连衣裙就别再套裙子了
+      var hasDress = out.some(function (o) {
+        var it = itemById(o.id); return it && slotOf(it) === 'dress';
       });
+      if (hasDress && Math.random() < 0.6) {
+        out = out.filter(function (o) {
+          var it = itemById(o.id); return !it || slotOf(it) !== 'bottom';
+        });
+      }
+      if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
+      S.clothes = out;
+      S.sel = null;
+      afterOutfitChange();
+      renderGrid();
+    }, '随机一套');
+  }
+
+  // 🙂 随机长相 —— 只摇人，衣服不动
+  function randomFace() {
+    withCats(['body', 'hair'], function () {
+      var out = [];
+      var skin = pickFrom('body', function (it) { return it.id === 'body.body'; });
+      if (skin) out.push(skin);
+      var head = pickFrom('body', isSlot('head'));
+      if (head && skin) head.v = skin.v;      // 肤色和脸得同色，不然脖子会花
+      if (head) out.push(head);
+      var hair = pickFrom('hair', isSlot('hair'));
+      if (hair) out.push(hair);
+      var brows = pickFrom('body', function (it) { return (it.sub || '') === 'head/eyebrows'; });
+      if (brows) {
+        if (hair) brows.v = hair.v;           // 眉毛跟发色更自然
+        out.push(brows);
+      }
+      var nose = pickFrom('body', function (it) { return (it.sub || '') === 'head/nose'; });
+      if (nose && skin) { nose.v = skin.v; out.push(nose); }
+      if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
+      S.person = out;
+      S.sel = null;
+      afterOutfitChange();
+      renderGrid();
+      toast('换了张脸 —— 衣服没动', 'ok');
+    }, '随机长相');
   }
 
   function openTab(tab) {
@@ -1566,29 +1739,62 @@
   /* ================================================================
      启动 / 换包：拉 index，定出这个聊天该穿什么，再把要用的分类拉下来
      ================================================================ */
+  // 素材包自带的那一套，分成长相 / 衣服两半
+  function defaultParts(idx) {
+    return splitList((idx.defaultOutfit || []).map(function (o) {
+      return { id: o.item, v: o.variant };
+    }));
+  }
+  // 身体和脸这两格永远不能空 —— 老存档、玩家手动删过、或者数据坏了，都在这儿兜住
+  function ensurePerson(idx) {
+    var d = defaultParts(idx).person;
+    var pick = function (test, fallback) {
+      if (S.person.some(function (o) { return test(o.id); })) return;
+      var got = null;
+      d.forEach(function (o) { if (!got && test(o.id)) got = o; });
+      S.person.push(got || fallback);
+    };
+    pick(isSkinId, { id: 'body.body', v: 'light' });
+    pick(isHeadId, {
+      id: S.pack === 'male' ? 'head.heads.human.heads_human_male'
+                            : 'head.heads.human.heads_human_female',
+      v: 'light'
+    });
+  }
+
   function boot() {
     loading++;
     return loadIndex(S.pack).then(function (idx) {
       loading--;
+      S.sets = (idx.sets || []).slice();
       // 这个聊天该穿什么，三选一（一定会命中一条，不留「保持原样」的缝）：
       //   1 这个聊天自己存过一套    2 这个包上次穿的那套    3 素材包自带的默认套
       var chat = readChatOutfit();
-      var last = (S.last && S.last[S.pack]) || [];
+      var lastC = (S.last && S.last[S.pack]) || [];
+      var lastP = (S.face && S.face[S.pack]) || [];
       S.promptEdited = false;
-      if (chat && chat.items.length && (chat.pack || 'female') === S.pack) {
-        S.outfit = chat.items;
+      if (chat && (chat.pack || 'female') === S.pack &&
+          (chat.items.length || (chat.person && chat.person.length))) {
+        if (Array.isArray(chat.person)) {          // v0.2 存的：本来就是分开的
+          S.person = chat.person.slice();
+          S.clothes = chat.items.slice();
+        } else {                                   // v0.1 存的：混在一起，分开
+          var s0 = splitList(chat.items);
+          S.person = s0.person; S.clothes = s0.clothes;
+        }
         S.injected = !!chat.on;
         if (chat.prompt) { S.prompt = chat.prompt; S.promptEdited = true; }
-      } else if (last.length) {
-        S.outfit = last.slice();
+      } else if (lastC.length || lastP.length) {
+        var s1 = splitList(lastP.concat(lastC));
+        S.person = s1.person; S.clothes = s1.clothes;
         S.injected = false;
       } else {
-        S.outfit = (idx.defaultOutfit || []).map(function (o) {
-          return { id: o.item, v: o.variant };
-        });
+        var d = defaultParts(idx);
+        S.person = d.person; S.clothes = d.clothes;
         S.injected = false;
       }
-      return ensureOutfitData(S.outfit);
+      ensurePerson(idx);
+      return ensureOutfitData(worn());
     }, function (e) {
       loading--;
       toast('素材清单没下下来（' + (e.message || e) + '）—— 衣橱还能开，但画不出娃娃', 'error');
