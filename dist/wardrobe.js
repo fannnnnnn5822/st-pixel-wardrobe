@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.2.1';
+  var VERSION = '0.2.2';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -629,8 +629,11 @@
     var rest = rows.filter(function (r) { return !used[r.it.id]; });
     if (rest.length) parts.push('还有：' + rest.map(function (r) { return r.word; }).join('、'));
     if (!parts.length) return '';
+    // 最后那句是给「聊到一半换衣服」用的：注入是替换式的，AI 只看得到新的这一套，
+    // 不加这句它会觉得和前文对不上，然后把人写回旧衣服。
     return '[{{user}} 今日穿搭] ' + parts.join('；') +
-      '。描写{{user}}时按这套穿搭写，衣物细节可以在动作里自然带出，不必每轮复述。';
+      '。描写{{user}}时按这套穿搭写，衣物细节可以在动作里自然带出，不必每轮复述。' +
+      '如果前文里{{user}}穿的和这套不同，视为已经换过衣服，不要回到旧穿着。';
   }
   function syncPrompt(force) {
     if (S.promptEdited && !force) return;
