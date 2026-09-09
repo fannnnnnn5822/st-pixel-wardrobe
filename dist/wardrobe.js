@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.4.0';
+  var VERSION = '0.4.1';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -72,6 +72,23 @@
   function packPill(id) {
     return (IDX[id] && IDX[id].packPill) || packOf(id).pill;
   }
+
+  /* ================================================================
+     娃娃底色
+     白衣服在浅格子上、黑衣服在深格子上都会糊得看不见 —— 所以给一排底色自己挑。
+     ⚠ 选了以后**娃娃和右边格子里的小图一起换**：小图看不清等于没挑。
+     记在全局设置里（跟着人走，不跟卡），三个素材包共用一个。
+     ================================================================ */
+  var BGS = [
+    { id: 'checker', zh: '透明格子', css: '' },   // css 空 = 保持原来那套棋盘格
+    { id: 'dark',    zh: '深灰',     css: '#2a2e37' },
+    { id: 'light',   zh: '浅灰',     css: '#d9dde3' },
+    { id: 'cream',   zh: '米白',     css: '#f4efe6' },
+    { id: 'mist',    zh: '雾霾蓝',   css: '#94a8b8' },
+    { id: 'blush',   zh: '淡粉',     css: '#f0c8c8' },
+    { id: 'ink',     zh: '墨绿',     css: '#2f5d50' }
+  ];
+  var BG_IDS = BGS.map(function (b) { return b.id; });
 
   /* ================================================================
      分类 / 槽位
@@ -230,8 +247,9 @@
   var S = {
     pack: 'female',
     tab: 'body',
-    tier: 'featured',        // 'featured' | 'all'
-    nsfw: false,             // 成人向小物的总开关，默认关；关着的时候到处都看不见
+    // 'featured' 精选（不含 NSFW）| 'all' 全部（含 NSFW）| 'nsfw' 只看这一页的 NSFW
+    // 三选一的**视图**，不是开关 —— 想找成人向单品点第三颗，一屏就都在那儿
+    tier: 'featured',
     fantasyOpen: false,
     sel: null,               // 颜色条现在在讲哪件
     person: [],              // [{id, v}] 长相：肤色 / 脸 / 五官 / 头发（换衣服不动它）
@@ -244,6 +262,7 @@
     favorites: [],           // [{id, v, pack}]
     outfits: [],             // [{name, pack, items:[{id,v}], ts}]
     ballHidden: false,
+    bg: 'checker',           // 娃娃和小图的底色（见 BGS）
     snap: true,              // 手机上球贴边半藏
     pos: null, posNarrow: null, panelPos: null
   };
@@ -263,8 +282,8 @@
     if (Array.isArray(g.favorites)) S.favorites = g.favorites.slice(0, 300);
     if (Array.isArray(g.outfits)) S.outfits = g.outfits.slice(0, 60);
     if (typeof g.ballHidden === 'boolean') S.ballHidden = g.ballHidden;
+    if (BG_IDS.indexOf(g.bg) >= 0) S.bg = g.bg;
     if (typeof g.snap === 'boolean') S.snap = g.snap;
-    if (typeof g.nsfw === 'boolean') S.nsfw = g.nsfw;
     if (g.pos && typeof g.pos.left === 'number') S.pos = g.pos;
     if (g.posNarrow && typeof g.posNarrow.left === 'number') S.posNarrow = g.posNarrow;
     if (g.panelPos && typeof g.panelPos.left === 'number') S.panelPos = g.panelPos;
@@ -309,8 +328,8 @@
           last: S.last,
           face: S.face,
           ballHidden: S.ballHidden,
+          bg: S.bg,
           snap: S.snap,
-          nsfw: S.nsfw,
           pos: S.pos, posNarrow: S.posNarrow, panelPos: S.panelPos,
           v: VERSION
         };
@@ -899,6 +918,19 @@
     '   linear-gradient(45deg,#2c313d 25%,#252a34 25%,#252a34 75%,#2c313d 75%);',
     '  background-size:24px 24px;background-position:0 0,12px 12px;',
     '}',
+    '#' + NS + '-panel .pw-dollcol{display:flex;flex-direction:column;gap:6px;flex:0 0 auto;align-items:center}',
+    /* 底色小圆点：18px 是手机上能戳中的下限，7 颗 + 3px 缝正好一行 144px（和娃娃同宽） */
+    '#' + NS + '-panel .pw-bgs{',
+    '  display:flex;flex-wrap:wrap;justify-content:center;gap:3px;width:144px;',
+    '}',
+    '#' + NS + '-panel .pw-bgdot{',
+    '  box-sizing:border-box;width:18px;height:18px;min-width:18px;padding:0;border-radius:999px;',
+    '  border:1px solid var(--pw-line);cursor:pointer;background-size:10px 10px;',
+    '}',
+    '#' + NS + '-panel .pw-bgdot:hover{border-color:var(--pw-acc2)}',
+    '#' + NS + '-panel .pw-bgdot.on{',
+    '  border-color:var(--pw-acc);box-shadow:0 0 0 2px var(--pw-acc);color:inherit;font-weight:400;',
+    '}',
     '#' + NS + '-panel .pw-side{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:6px}',
     '#' + NS + '-panel .pw-worn{',
     '  font-size:13px;color:var(--pw-dim);line-height:1.5;max-height:76px;overflow:auto;',
@@ -917,7 +949,7 @@
     '}',
     '#' + NS + '-panel .pw-filter button{padding:4px 10px;font-size:13px}',
     '#' + NS + '-panel .pw-filter .pw-count{font-size:13px;color:var(--pw-dim);margin-left:auto}',
-    /* NSFW 开关：平时是暗的一颗，开了才亮起来 */
+    /* NSFW：第三个视图。虚线边和另外两颗区分开 —— 一眼看出它是个筛子 */
     '#' + NS + '-panel .pw-nsfwbtn{',
     '  font-size:13px;padding:6px 10px;letter-spacing:.04em;color:var(--pw-dim);',
     '  border-style:dashed;',
@@ -954,7 +986,13 @@
     '#' + NS + '-panel .pw-tile.on{border-color:var(--pw-acc);background:#33232c}',
     '#' + NS + '-panel .pw-tile canvas{',
     '  width:56px;height:56px;image-rendering:pixelated;image-rendering:crisp-edges;display:block;margin:0 auto;',
+    '  border-radius:6px;',
     '}',
+    // 选了底色，娃娃和右边格子里的小图**一起**换 —— 小图看不清等于没挑
+    BGS.filter(function (b) { return b.css; }).map(function (b) {
+      var sel = '#' + NS + '-panel.pw-bg-' + b.id + ' ';
+      return sel + '.pw-doll,' + sel + '.pw-tile canvas{background:' + b.css + '}';
+    }).join('\n'),
     '#' + NS + '-panel .pw-tile .pw-n{font-size:13px;margin-top:3px;line-height:1.25;color:var(--pw-ink);word-break:break-all}',
     '#' + NS + '-panel .pw-fav{',
     '  position:absolute;right:2px;top:2px;font-size:13px;line-height:1;padding:2px 3px;border:0;',
@@ -1155,7 +1193,10 @@
       '<div class="pw-body">' +
         '<div class="pw-left">' +
           '<div class="pw-stage">' +
+            '<div class="pw-dollcol">' +
             '<canvas class="pw-doll"></canvas>' +
+            '<div class="pw-bgs"></div>' +
+            '</div>' +
             '<div class="pw-side">' +
               '<div class="pw-worn"></div>' +
               '<div class="pw-acts">' +
@@ -1176,7 +1217,8 @@
           '<div class="pw-filter">' +
             '<button class="pw-tier" data-tier="featured">精选</button>' +
             '<button class="pw-tier" data-tier="all">全部</button>' +
-            '<button class="pw-nsfwbtn" title="成人向小物（默认关着）">NSFW</button>' +
+            '<button class="pw-tier pw-nsfwbtn" data-tier="nsfw" ' +
+              'title="只看这一页里的成人向单品">NSFW</button>' +
             '<span class="pw-count"></span>' +
           '</div>' +
           '<div class="pw-grid"></div>' +
@@ -1196,6 +1238,8 @@
     DOC.body.appendChild(p);
     bindPanelDrag(p);
     wireUp(p);
+    applyBg();
+    renderBgs();
     mounted = true;
 
     if (!vvBound) {
@@ -1245,13 +1289,6 @@
         S.tier = b.getAttribute('data-tier');
         renderFilter(); renderGrid();
       });
-    });
-    p.querySelector('.pw-nsfwbtn').addEventListener('click', function () {
-      S.nsfw = !S.nsfw;
-      saveGlobal();
-      renderFilter(); renderSets(); renderGrid(); renderTabs();
-      toast(S.nsfw ? '成人向小物出来了（这个开关记在全局，跟着你走）'
-                   : '成人向小物收起来了', S.nsfw ? 'warn' : 'ok');
     });
     p.querySelector('.pw-random').addEventListener('click', randomOutfit);
     p.querySelector('.pw-face').addEventListener('click', randomFace);
@@ -1315,6 +1352,7 @@
      ================================================================ */
   function renderAll() {
     renderHead();
+    renderBgs();
     renderSets();
     renderSaved();
     renderTabs();
@@ -1330,6 +1368,41 @@
     qa('.pw-pack').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-pack') === S.pack);
     });
+  }
+  /* 娃娃底色那一排点。白衣服在浅格子上、黑衣服在深格子上都会糊没，
+     所以让人自己挑一个能看清的底 —— 娃娃和右边的小图一起换。 */
+  function applyBg() {
+    var p = DOC.getElementById(NS + '-panel'); if (!p) return;
+    BGS.forEach(function (b) { p.classList.remove('pw-bg-' + b.id); });
+    p.classList.add('pw-bg-' + S.bg);
+  }
+  function renderBgs() {
+    var host = q('.pw-bgs'); if (!host) return;
+    host.innerHTML = '';
+    BGS.forEach(function (b) {
+      var d = DOC.createElement('button');
+      d.className = 'pw-bgdot' + (S.bg === b.id ? ' on' : '');
+      d.title = '娃娃底色：' + b.zh;
+      d.setAttribute('aria-label', '娃娃底色：' + b.zh);
+      if (b.css) {
+        d.style.background = b.css;
+      } else {
+        // 透明格子那颗自己就画成一小块棋盘
+        d.style.background =
+          'linear-gradient(45deg,#2c313d 25%,transparent 25%,transparent 75%,#2c313d 75%),' +
+          'linear-gradient(45deg,#2c313d 25%,#252a34 25%,#252a34 75%,#2c313d 75%)';
+        d.style.backgroundSize = '10px 10px';
+        d.style.backgroundPosition = '0 0,5px 5px';
+      }
+      d.addEventListener('click', function () {
+        S.bg = b.id;
+        saveGlobal();
+        applyBg();
+        renderBgs();
+      });
+      host.appendChild(d);
+    });
+    applyBg();
   }
   function renderSettings() {
     var host = q('.pw-set'); if (!host) return;
@@ -1365,7 +1438,7 @@
   function renderSets() {
     var host = q('.pw-sets'); if (!host) return;
     host.innerHTML = '';
-    var shown = S.sets.filter(nsfwOk);
+    var shown = S.sets;
     if (!shown.length) { host.style.display = 'none'; return; }
     host.style.display = 'flex';
     var lab = DOC.createElement('span');
@@ -1460,16 +1533,19 @@
     qa('.pw-tier').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-tier') === S.tier);
     });
-    var n = q('.pw-nsfwbtn');
-    if (n) {
-      n.classList.toggle('on', !!S.nsfw);
-      n.textContent = S.nsfw ? 'NSFW 开' : 'NSFW';
-    }
     var f = q('.pw-filter');
     if (f) f.style.display = (S.tab === 'fav') ? 'none' : 'flex';
   }
-  // 没开 NSFW 就当这件东西不存在 —— 格子、套装、随机、收藏，一处都不能漏
-  function nsfwOk(x) { return S.nsfw || !(x && x.nsfw); }
+  /* 现在这个视图收哪些单品。三个视图是**三选一**，不是「藏起来 / 放出来」：
+       精选 = 挑过的日常款（不含 NSFW）
+       全部 = 这一页全部，连 NSFW 一起
+       NSFW = 只有这一页带 NSFW 标记的那些（想找的人一屏找到，不用翻） */
+  function inView(it, view) {
+    view = view || S.tier;
+    if (view === 'nsfw') return !!(it && it.nsfw);
+    if (view === 'featured') return it.tier === 'featured' && !it.nsfw;
+    return true;
+  }
   function renderWorn() {
     var host = q('.pw-worn'); if (!host) return;
     var rows = wornSorted();
@@ -1594,7 +1670,7 @@
       return S.favorites.filter(function (f) { return (f.pack || 'female') === S.pack; })
         .map(function (f) {
           var it = itemById(f.id);
-          return (it && nsfwOk(it)) ? { it: it, v: f.v } : null;
+          return it ? { it: it, v: f.v } : null;
         }).filter(Boolean);
     }
     var c = CATS[S.pack + '/' + S.tab];
@@ -1602,9 +1678,10 @@
     var out = [];
     c.items.forEach(function (it) {
       if (it.aud !== 'both' && it.aud !== S.pack) return;
-      if (!nsfwOk(it)) return;
+      // NSFW 视图：这一页带标记的全给，奇幻组也不折叠（本来就没几件）
+      if (S.tier === 'nsfw') { if (it.nsfw) out.push({ it: it, v: null }); return; }
       if (it.tier === 'fantasy') { if (S.tier === 'all' && S.fantasyOpen) out.push({ it: it, v: null, fantasy: 1 }); return; }
-      if (S.tier === 'featured' && it.tier !== 'featured') return;
+      if (!inView(it)) return;
       out.push({ it: it, v: null });
     });
     return out;
@@ -1621,10 +1698,11 @@
     if (!rows.length) {
       host.innerHTML = '<div class="pw-empty">' +
         (S.tab === 'fav' ? '还没有收藏。点单品右上角的 ♡ 就存进来了。'
-                         : '这一页在「精选」里是空的，点「全部」看看。') + '</div>';
+         : S.tier === 'nsfw' ? '这一栏没有 NSFW 单品'
+         : '这一页在「精选」里是空的，点「全部」看看。') + '</div>';
     }
     var fantasyCount = 0;
-    if (S.tab !== 'fav') {
+    if (S.tab !== 'fav' && S.tier !== 'nsfw') {
       var c = CATS[S.pack + '/' + S.tab];
       if (c) fantasyCount = c.items.filter(function (i) { return i.tier === 'fantasy'; }).length;
     }
@@ -1824,12 +1902,12 @@
     } else apply();
   }
 
-  // 摇一件：从这一类的精选里挑
-  function pickFrom(cat, pred) {
+  // 摇一件：按**现在这个视图**挑（精选摇不到 NSFW；NSFW 视图只摇 NSFW）。
+  // 长相那几格不跟视图走 —— 摇脸的时候没人想要一个空池子，固定用精选。
+  function pickFrom(cat, pred, view) {
     var c = CATS[S.pack + '/' + cat]; if (!c) return null;
     var pool = c.items.filter(function (it) {
-      return it.tier === 'featured' && (it.aud === 'both' || it.aud === S.pack) &&
-             nsfwOk(it) && pred(it);
+      return (it.aud === 'both' || it.aud === S.pack) && inView(it, view) && pred(it);
     });
     if (!pool.length) return null;
     var it = pool[(Math.random() * pool.length) | 0];
@@ -1884,10 +1962,10 @@
         idx.core.forEach(function (rule) {
           var cat = catOfId(rule.id || rule.prefix);
           if (!cat) return;
-          var got = pickFrom(cat, function (it) { return ruleHit([rule], it.id); });
+          var got = pickFrom(cat, function (it) { return ruleHit([rule], it.id); }, 'featured');
           if (got) out.push(got);
         });
-        var hair = pickFrom('hair', isSlot('hair'));
+        var hair = pickFrom('hair', isSlot('hair'), 'featured');
         if (hair) out.push(hair);
         if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
         S.person = out;
@@ -1900,19 +1978,19 @@
     }
     withCats(['body', 'hair'], function () {
       var out = [];
-      var skin = pickFrom('body', function (it) { return it.id === 'body.body'; });
+      var skin = pickFrom('body', function (it) { return it.id === 'body.body'; }, 'featured');
       if (skin) out.push(skin);
-      var head = pickFrom('body', isSlot('head'));
+      var head = pickFrom('body', isSlot('head'), 'featured');
       if (head && skin) head.v = skin.v;      // 肤色和脸得同色，不然脖子会花
       if (head) out.push(head);
-      var hair = pickFrom('hair', isSlot('hair'));
+      var hair = pickFrom('hair', isSlot('hair'), 'featured');
       if (hair) out.push(hair);
-      var brows = pickFrom('body', function (it) { return (it.sub || '') === 'head/eyebrows'; });
+      var brows = pickFrom('body', function (it) { return (it.sub || '') === 'head/eyebrows'; }, 'featured');
       if (brows) {
         if (hair) brows.v = hair.v;           // 眉毛跟发色更自然
         out.push(brows);
       }
-      var nose = pickFrom('body', function (it) { return (it.sub || '') === 'head/nose'; });
+      var nose = pickFrom('body', function (it) { return (it.sub || '') === 'head/nose'; }, 'featured');
       if (nose && skin) { nose.v = skin.v; out.push(nose); }
       if (!out.length) { toast('素材还没到，等一下再摇', 'warn'); return; }
       S.person = out;
