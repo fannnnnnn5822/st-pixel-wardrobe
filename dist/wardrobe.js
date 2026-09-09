@@ -23,7 +23,7 @@
 
   var NS = 'pixel-wardrobe';
   var BTN = '👗 衣橱';
-  var VERSION = '0.2.2';
+  var VERSION = '0.3.0';
   var GKEY = 'pixel_wardrobe';          // 变量表里的键名（全局 + 聊天都用这个）
   var INJECT_ID = 'pixel_wardrobe';     // 注入 id，固定不变 = 再按一次是替换
   var CELL = 64;
@@ -57,7 +57,9 @@
     { id: 'headwear', name: '头饰配饰' },
     { id: 'torso',    name: '上装' },
     { id: 'legs',     name: '下装' },
-    { id: 'feet',     name: '鞋' }
+    { id: 'feet',     name: '鞋' },
+    // 手持只有自绘的那批，只在女生版里存在 —— 素材包没这一类就不显示这一页
+    { id: 'hand',     name: '手持' }
   ];
   var TAB_NAME = {};
   TABS.forEach(function (t) { TAB_NAME[t.id] = t.name; });
@@ -67,7 +69,7 @@
     var head = String(id).split('.')[0];
     if (head === 'body' || head === 'head') return 'body';
     if (head === 'hair' || head === 'headwear' || head === 'torso' ||
-        head === 'legs' || head === 'feet') return head;
+        head === 'legs' || head === 'feet' || head === 'hand') return head;
     return null;
   }
 
@@ -141,12 +143,14 @@
   var PROMPT_GROUPS = [
     { label: '发型', slots: ['hair', 'hairext', 'beard', 'stache'] },
     { label: '上身', slots: ['dress', 'top', 'vest', 'jacket', 'apron', 'armour', 'cape', 'belt',
-                             'gloves', 'cuffs'] },
+                             'gloves', 'cuffs', 'harness'] },
     { label: '下身', slots: ['bottom', 'garter'] },
     { label: '鞋袜', slots: ['socks', 'stockings', 'shoes'] },
-    { label: '配饰', slots: ['hat', 'glasses', 'eyepatch', 'mask', 'neck', 'charm',
+    { label: '配饰', slots: ['hat', 'halo', 'glasses', 'eyepatch', 'mask', 'mouth', 'neck', 'charm',
                              'headwear/accessories/earrings', 'back'] },
-    { label: '别的', slots: ['ears', 'wings', 'tail', 'horns'] }
+    { label: '别的', slots: ['ears', 'wings', 'tail', 'horns'] },
+    // plain = 不写「标签：」，直接连成一句话：手里拿着皮鞭
+    { label: '手里拿着', slots: ['hand'], plain: true }
   ];
   var PROMPT_SKIP = { skin: 1, head: 1, brows: 1, nose: 1, eyes: 1, wrinkles: 1, bodyalt: 1 };
   // 这些子分类不进词（肤色、眉毛、鼻子、皱纹本身不是「穿搭」）
@@ -160,6 +164,7 @@
     pack: 'female',
     tab: 'body',
     tier: 'featured',        // 'featured' | 'all'
+    nsfw: false,             // 成人向小物的总开关，默认关；关着的时候到处都看不见
     fantasyOpen: false,
     sel: null,               // 颜色条现在在讲哪件
     person: [],              // [{id, v}] 长相：肤色 / 脸 / 五官 / 头发（换衣服不动它）
@@ -192,6 +197,7 @@
     if (Array.isArray(g.outfits)) S.outfits = g.outfits.slice(0, 60);
     if (typeof g.ballHidden === 'boolean') S.ballHidden = g.ballHidden;
     if (typeof g.snap === 'boolean') S.snap = g.snap;
+    if (typeof g.nsfw === 'boolean') S.nsfw = g.nsfw;
     if (g.pos && typeof g.pos.left === 'number') S.pos = g.pos;
     if (g.posNarrow && typeof g.posNarrow.left === 'number') S.posNarrow = g.posNarrow;
     if (g.panelPos && typeof g.panelPos.left === 'number') S.panelPos = g.panelPos;
@@ -236,6 +242,7 @@
           face: S.face,
           ballHidden: S.ballHidden,
           snap: S.snap,
+          nsfw: S.nsfw,
           pos: S.pos, posNarrow: S.posNarrow, panelPos: S.panelPos,
           v: VERSION
         };
@@ -624,7 +631,9 @@
           (g.slots.indexOf(r.slot) >= 0 || g.slots.indexOf(r.sub) >= 0);
       });
       hit.forEach(function (r) { used[r.it.id] = 1; });
-      if (hit.length) parts.push(g.label + '：' + hit.map(function (r) { return r.word; }).join('、'));
+      if (!hit.length) return;
+      var words = hit.map(function (r) { return r.word; }).join('、');
+      parts.push(g.plain ? (g.label + words) : (g.label + '：' + words));
     });
     var rest = rows.filter(function (r) { return !used[r.it.id]; });
     if (rest.length) parts.push('还有：' + rest.map(function (r) { return r.word; }).join('、'));
@@ -783,6 +792,14 @@
     '  display:flex;align-items:center;gap:6px;padding:0 12px 8px;flex:0 0 auto;flex-wrap:wrap;',
     '}',
     '#' + NS + '-panel .pw-filter .pw-count{font-size:13px;color:var(--pw-dim);margin-left:auto}',
+    /* NSFW 开关：平时是暗的一颗，开了才亮起来 */
+    '#' + NS + '-panel .pw-nsfwbtn{',
+    '  font-size:13px;padding:6px 10px;letter-spacing:.04em;color:var(--pw-dim);',
+    '  border-style:dashed;',
+    '}',
+    '#' + NS + '-panel .pw-nsfwbtn.on{',
+    '  background:#5a2733;color:#ffd9e2;border-color:#a4485f;border-style:solid;font-weight:700;',
+    '}',
     /* 颜色条 */
     '#' + NS + '-panel .pw-colors{',
     '  display:none;align-items:center;gap:6px;padding:8px 12px;flex:0 0 auto;flex-wrap:wrap;',
@@ -1014,6 +1031,7 @@
       '<div class="pw-filter">' +
         '<button class="pw-tier" data-tier="featured">精选</button>' +
         '<button class="pw-tier" data-tier="all">全部</button>' +
+        '<button class="pw-nsfwbtn" title="成人向小物（默认关着）">NSFW</button>' +
         '<span class="pw-count"></span>' +
       '</div>' +
       '<div class="pw-colors"></div>' +
@@ -1080,6 +1098,13 @@
         S.tier = b.getAttribute('data-tier');
         renderFilter(); renderGrid();
       });
+    });
+    p.querySelector('.pw-nsfwbtn').addEventListener('click', function () {
+      S.nsfw = !S.nsfw;
+      saveGlobal();
+      renderFilter(); renderSets(); renderGrid(); renderTabs();
+      toast(S.nsfw ? '成人向小物出来了（这个开关记在全局，跟着你走）'
+                   : '成人向小物收起来了', S.nsfw ? 'warn' : 'ok');
     });
     p.querySelector('.pw-random').addEventListener('click', randomOutfit);
     p.querySelector('.pw-face').addEventListener('click', randomFace);
@@ -1188,13 +1213,15 @@
   function renderSets() {
     var host = q('.pw-sets'); if (!host) return;
     host.innerHTML = '';
-    if (!S.sets.length) { host.style.display = 'none'; return; }
+    var shown = S.sets.filter(nsfwOk);
+    if (!shown.length) { host.style.display = 'none'; return; }
     host.style.display = 'flex';
     var lab = DOC.createElement('span');
     lab.className = 'pw-striplabel';
     lab.textContent = '套装';
     host.appendChild(lab);
-    S.sets.forEach(function (s, i) {
+    shown.forEach(function (s) {
+      var i = S.sets.indexOf(s);
       var chip = DOC.createElement('button');
       chip.className = 'pw-setchip';
       chip.textContent = s.name;
@@ -1266,7 +1293,9 @@
   function renderTabs() {
     var host = q('.pw-tabs'); if (!host) return;
     host.innerHTML = '';
-    var list = TABS.slice();
+    // 素材包里没有的分类就不显示那一页（男生版没有「手持」）
+    var idx = IDX[S.pack];
+    var list = TABS.filter(function (t) { return !idx || !!idx.byCat[t.id]; });
     if (S.favorites.length) list.unshift({ id: 'fav', name: '❤️ 收藏' });
     list.forEach(function (t) {
       var b = DOC.createElement('button');
@@ -1280,9 +1309,16 @@
     qa('.pw-tier').forEach(function (b) {
       b.classList.toggle('on', b.getAttribute('data-tier') === S.tier);
     });
+    var n = q('.pw-nsfwbtn');
+    if (n) {
+      n.classList.toggle('on', !!S.nsfw);
+      n.textContent = S.nsfw ? 'NSFW 开' : 'NSFW';
+    }
     var f = q('.pw-filter');
     if (f) f.style.display = (S.tab === 'fav') ? 'none' : 'flex';
   }
+  // 没开 NSFW 就当这件东西不存在 —— 格子、套装、随机、收藏，一处都不能漏
+  function nsfwOk(x) { return S.nsfw || !(x && x.nsfw); }
   function renderWorn() {
     var host = q('.pw-worn'); if (!host) return;
     var rows = wornSorted();
@@ -1402,7 +1438,7 @@
       return S.favorites.filter(function (f) { return (f.pack || 'female') === S.pack; })
         .map(function (f) {
           var it = itemById(f.id);
-          return it ? { it: it, v: f.v } : null;
+          return (it && nsfwOk(it)) ? { it: it, v: f.v } : null;
         }).filter(Boolean);
     }
     var c = CATS[S.pack + '/' + S.tab];
@@ -1410,6 +1446,7 @@
     var out = [];
     c.items.forEach(function (it) {
       if (it.aud !== 'both' && it.aud !== S.pack) return;
+      if (!nsfwOk(it)) return;
       if (it.tier === 'fantasy') { if (S.tier === 'all' && S.fantasyOpen) out.push({ it: it, v: null, fantasy: 1 }); return; }
       if (S.tier === 'featured' && it.tier !== 'featured') return;
       out.push({ it: it, v: null });
@@ -1633,7 +1670,8 @@
   function pickFrom(cat, pred) {
     var c = CATS[S.pack + '/' + cat]; if (!c) return null;
     var pool = c.items.filter(function (it) {
-      return it.tier === 'featured' && (it.aud === 'both' || it.aud === S.pack) && pred(it);
+      return it.tier === 'featured' && (it.aud === 'both' || it.aud === S.pack) &&
+             nsfwOk(it) && pred(it);
     });
     if (!pool.length) return null;
     var it = pool[(Math.random() * pool.length) | 0];
