@@ -1,0 +1,3546 @@
+PIXEL WARDROBE / 像素衣橱 — ART CREDITS
+========================================================================
+
+The sprites in atlas_*.png are extracted (one standing frame each,
+some recoloured via the project's own palette definitions) from the
+Universal LPC Spritesheet Character Generator:
+  https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator
+Sprites contributed as part of the Liberated Pixel Cup project on
+OpenGameArt.org: http://opengameart.org/content/lpc-collection
+
+Source files actually used in this build: 499
+Distinct authors: 60   Distinct licenses: 14
+
+------------------------------------------------------------------------
+SHORT FORM (paste this on a credits screen)
+------------------------------------------------------------------------
+
+Sprites by: JaidynReiman, bluecarrot16, ElizaWy, Stephen Challener (Redshrike), Johannes Sjölund (wulax), Nila122, Matthew Krohn (makrohn), Thane Brimhall (pennomi), laetissima, Manuel Riecke (MrBeast), Benjamin K. Smith (BenCreating), Napsio (Vitruvian Studio), Michael Whitlock (bigbeargames), Lanea Zimmerman (Sharm), Mandi Paugh, Daniel Eddeland (daneeklu), William.Thompsonj, The Foreman, Joe White, thecilekli, Fabzy, Marcel van de Steeg (MadMarcel), Evert, Luke Mehl, Sander Frenken (castelonia), Tuomo Untinen (reemax), Barbara Riviera, Tracy, AntumDeluge, Yamilian, Carlo Enrico Victoria (Nemisys), Pierre Vigier (pvigier), Napsio, kirts, Bluecarrot16, Skorpio, Radomir Dopieralski, Matthew Krohn (Makrohn), William.Thomsponj, kheftel, Eliza Wyatt (ElizaWy), Makrohn, macmanmatty, TheraHedwig, MuffinElZangano, Durrani, Page, Emilio J. Sanchez-Sierra, kcilds/Rocetti/Eredah, Cobra Hubbard (BlueVortexGames), DarkwallLKE, Charles Sanchez (CharlesGabriel), Stafford McIntyre, PlatForge project, ??, Joshua Taylor, Zi Ye, dalonedrau, Ahmad3366, 7Soul
+Sprites contributed as part of the Liberated Pixel Cup project from
+OpenGameArt.org: http://opengameart.org/content/lpc-collection
+License: Creative Commons Attribution-ShareAlike 3.0 (CC-BY-SA 3.0)
+  <http://creativecommons.org/licenses/by-sa/3.0/>
+Detailed credits: see the per-file list below.
+
+------------------------------------------------------------------------
+LICENSES PRESENT IN THIS BUILD
+------------------------------------------------------------------------
+
+GPL 3.0  (298 files)
+    GNU General Public License 3.0 — https://www.gnu.org/licenses/gpl-3.0.en.html
+    Derivative artwork must be distributed under GPL 3.0 or later.
+OGA-BY 3.0  (242 files)
+    OpenGameArt Attribution 3.0 — https://static.opengameart.org/OGA-BY-3.0.txt
+    Credit the authors; DRM is allowed.
+CC-BY-SA 3.0  (230 files)
+    Attribution-ShareAlike 3.0 — https://creativecommons.org/licenses/by-sa/3.0/
+    Credit the authors; derivative artwork must stay CC-BY-SA 3.0 or later; no DRM.
+CC-BY 3.0+  (77 files)
+    Attribution 3.0 or later — https://creativecommons.org/licenses/by/3.0/
+    Credit the authors; no DRM. '+' = any later version is also fine.
+OGA-BY 3.0+  (76 files)
+    OpenGameArt Attribution 3.0 or later — https://static.opengameart.org/OGA-BY-3.0.txt
+    Credit the authors; DRM is allowed.
+CC0  (54 files)
+    Public domain dedication — https://creativecommons.org/public-domain/cc0/
+    No attribution required.
+GPL 2.0  (34 files)
+    GNU General Public License 2.0 — https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+    Derivative artwork must be distributed under GPL 2.0 or later.
+CC-BY 3.0  (27 files)
+    Attribution 3.0 — https://creativecommons.org/licenses/by/3.0/
+    Credit the authors; no DRM.
+OGA-BY 4.0  (8 files)
+    OpenGameArt Attribution 4.0 — https://static.opengameart.org/OGA-BY-4.0.txt
+    Credit the authors; DRM is allowed.
+CC-BY-SA 4.0  (8 files)
+    Attribution-ShareAlike 4.0 — https://creativecommons.org/licenses/by-sa/4.0/
+    Credit the authors; derivative artwork must stay CC-BY-SA 4.0 or later; no DRM.
+GPL 3.0+  (4 files)
+    GNU GPL 3.0 or later — https://www.gnu.org/licenses/gpl-3.0.en.html
+    Derivative artwork must be distributed under GPL 3.0 or later.
+CC-BY 4.0  (3 files)
+    Attribution 4.0 — https://creativecommons.org/licenses/by/4.0/
+    Credit the authors; no DRM.
+CC-BY  (3 files)
+    Attribution (version unspecified) — https://creativecommons.org/licenses/by/3.0/
+    Credit the authors; no DRM.
+OGA-SA 3.0  (2 files)
+    OpenGameArt Attribution-ShareAlike 3.0 — https://static.opengameart.org/OGA-BY-3.0.txt
+    Credit the authors; derivative artwork must stay under the same license.
+
+------------------------------------------------------------------------
+AUTHORS (files contributed to in this build)
+------------------------------------------------------------------------
+
+  263  JaidynReiman
+  236  bluecarrot16
+  100  ElizaWy
+   98  Stephen Challener (Redshrike)
+   80  Johannes Sjölund (wulax)
+   56  Nila122
+   34  Matthew Krohn (makrohn)
+   28  Thane Brimhall (pennomi)
+   28  laetissima
+   27  Manuel Riecke (MrBeast)
+   17  Benjamin K. Smith (BenCreating)
+   15  Napsio (Vitruvian Studio)
+   14  Michael Whitlock (bigbeargames)
+   11  Lanea Zimmerman (Sharm)
+   11  Mandi Paugh
+   10  Daniel Eddeland (daneeklu)
+    9  William.Thompsonj
+    8  The Foreman
+    8  Joe White
+    8  thecilekli
+    8  Fabzy
+    8  Marcel van de Steeg (MadMarcel)
+    7  Evert
+    6  Luke Mehl
+    5  Sander Frenken (castelonia)
+    5  Tuomo Untinen (reemax)
+    4  Barbara Riviera
+    4  Tracy
+    4  AntumDeluge
+    3  Yamilian
+    2  Carlo Enrico Victoria (Nemisys)
+    2  Pierre Vigier (pvigier)
+    2  Napsio
+    2  kirts
+    2  Bluecarrot16
+    2  Skorpio
+    2  Radomir Dopieralski
+    2  Matthew Krohn (Makrohn)
+    2  William.Thomsponj
+    2  kheftel
+    2  Eliza Wyatt (ElizaWy)
+    2  Makrohn
+    1  macmanmatty
+    1  TheraHedwig
+    1  MuffinElZangano
+    1  Durrani
+    1  Page
+    1  Emilio J. Sanchez-Sierra
+    1  kcilds/Rocetti/Eredah
+    1  Cobra Hubbard (BlueVortexGames)
+    1  DarkwallLKE
+    1  Charles Sanchez (CharlesGabriel)
+    1  Stafford McIntyre
+    1  PlatForge project
+    1  ??
+    1  Joshua Taylor
+    1  Zi Ye
+    1  dalonedrau
+    1  Ahmad3366
+    1  7Soul
+
+------------------------------------------------------------------------
+ORIGINAL SOURCE URLS
+------------------------------------------------------------------------
+
+   67  https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+   65  https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+   60  https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+   55  https://opengameart.org/content/lpc-pirates
+   53  https://opengameart.org/content/lpc-hair
+   39  https://opengameart.org/content/lpc-expanded-hair
+   38  https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+   36  http://opengameart.org/content/lpc-clothing-updates
+   28  https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+   28  https://opengameart.org/content/lpc-expanded-xlong-hair
+   27  https://opengameart.org/content/lpc-expanded-simple-shirts
+   25  https://opengameart.org/content/lpc-jewelry
+   21  https://opengameart.org/content/lpc-character-bases
+   19  https://opengameart.org/content/lpc-gentleman
+   19  http://opengameart.org/content/lpc-revised-character-basics
+   17  https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+   16  https://opengameart.org/content/lpc-kimono-relm
+   16  https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+   15  https://opengameart.org/content/lpc-expanded-socks-shoes
+   14  https://opengameart.org/content/lpc-base-character-expressions
+   13  https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+   12  https://opengameart.org/content/lpc-7-womens-shirts
+   11  https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+   11  https://opengameart.org/content/lpc-2-characters
+   11  https://opengameart.org/content/lpc-expanded-pants
+   10  https://opengameart.org/content/drakes-and-lizardfolk
+   10  https://opengameart.org/content/lpc-folk
+   10  http://opengameart.org/content/lpc-folk
+    9  https://opengameart.org/content/lpc-revised-character-basics
+    9  https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    9  https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+    9  https://opengameart.org/content/lpc-lizard-headgear
+    9  https://opengameart.org/content/lpc-style-farm-animals
+    8  https://opengameart.org/content/the-revolution-hair
+    8  https://opengameart.org/content/more-lpc-clothes-and-hair
+    8  https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    8  https://opengameart.org/content/lpc-combat-armor-for-women
+    7  https://opengameart.org/content/lpc-wings-new-animations
+    7  https://opengameart.org/content/lpc-roman-armor
+    7  https://opengameart.org/content/3-hairs-for-lpc
+    6  https://opengameart.org/content/lpc-santa
+    6  https://opengameart.org/content/lpc-clothes-and-hair
+    6  https://opengameart.org/content/lpc-sara
+    6  https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    5  https://opengameart.org/content/lpc-fairy-wings
+    5  https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    5  https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+    5  https://opengameart.org/content/female-mage-clothing-set
+    4  https://github.com/ElizaWy/LPC/tree/main/Characters/Head%20Accessories
+    4  https://opengameart.org/content/lpc-faun-and-minotaur
+    4  http://opengameart.org/content/sara-wizard
+    4  https://opengameart.org/content/concept-art-for-lpc-entry
+    4  https://opengameart.org/content/lpc-expanded-long-hair
+    4  https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2
+    4  https://opengameart.org/content/lpc-new-elven-ear-variants
+    3  https://opengameart.org/content/lpc-more-backpacks
+    3  https://opengameart.org/content/lpc-fairy-wings-pack-2
+    3  https://opengameart.org/content/lpc-dress-in-combat-poses
+    3  https://opengameart.org/content/lpc-long-straight-hair-with-12-colors
+    3  https://opengameart.org/content/ponytail-and-plain-hairstyles
+    3  https://opengameart.org/content/lpc-items-and-game-effects
+    3  https://opengameart.org/content/lpc-pointed-hats
+    3  https://opengameart.org/content/lpc-revised-elders
+    3  https://opengameart.org/content/lpc-wolf-animation
+    3  https://opengameart.org/content/lpc-wolfman
+    3  https://opengameart.org/content/lpc-clothes-for-children
+    2  https://opengameart.org/content/lpc-ladies
+    2  https://opengameart.org/content/lpc-skeleton
+    2  https://opengameart.org/content/lpc-zombie
+    2  https://opengameart.org/content/cyclops-and-his-eye
+    2  https://opengameart.org/content/lpc-heroine
+    2  https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack
+    2  https://opengameart.org/content/fantasy-rpg-npcs
+    2  https://opengameart.org/content/lpc-long-tied-hair-with-12-colors
+    2  https://github.com/makrohn/Universal-LPC-spritesheet/commit/f50007cb47c235d8896cafae7a613f0b6a9a09a8?short_path=02b86d4#diff-02b86d45789a3e3e8e79519c7d17d15c9e6ecc9b4ddecb1bcd8dfbbaef430b75
+    2  https://opengameart.org/content/lpc-celestial-wizard-hats
+    2  https:/opengameart.org/content/lpc-celestial-wizard-hats
+    2  https:/opengameart.org/content/lpc-expanded-hats-facial-helmets
+    2  https://opengameart.org/content/lpc-wild-boar
+    2  https://opengameart.org/content/lpc-boarman
+    2  https://opengameart.org/content/lpc-goblin
+    2  https://opengameart.org/content/
+    2  https://opengameart.org/content/lpc-child-standing-template
+    2  https://opengameart.org/content/musclemanogreminotaur
+    2  https://opengameart.org/content/trolls-0
+    2  https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear
+    2  https://opengameart.org/content/cc0-jewelry-icons
+    1  https://opengameart.org/content/lpc-farming-tilesets-magic-animations-and-ui-elements
+    1  https://opengameart.org/content/lpc-backpacks
+    1  https://opengameart.org/content/lpc-white-beard
+    1  https://opengameart.org/content/lpc-brunet-mustache
+    1  https://opengameart.org/content/lpc-jump-expanded
+    1  https://opengameart.org/content/lpc-be-seated
+    1  https://gitlab.com/vagabondgame/lpc-characters
+    1  https://opengameart.org/content/lpc-male-jumping-animation-by-durrani
+    1  https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle
+    1  https://opengameart.org/content/lpc-masks
+    1  https://opengameart.org/content/thin-mage-clothing-set
+    1  https://opengameart.org/content/lpc-pink-short-hair
+    1  https://opengameart.org/content/star-overland
+    1  https://opengameart.org/content/trevor-overland
+    1  https://opengameart.org/content/lpc-korean-idol-hairstyle-male-with-12-colors
+    1  https://opengameart.org/content/puck-overland
+    1  https://opengameart.org/content/lpc-heroine-2
+    1  https://opengameart.org/content/alternate-lpc-character-sprites-george
+    1  https://opengameart.org/content/one-more-lpc-alternate-character
+    1  https://opengameart.org/content/steampun-a-fy-with-concept-art
+    1  https://opengameart.org/content/eredah-rpg-character-base-48x64-ongoing
+    1  https://opengameart.org/content/anime-lpc-hair
+    1  https://opengameart.org/content/lpc-hijab
+    1  https://opengameart.org/content/lpc-crown
+    1  https://opengameart.org/content/wizard-2
+    1  https://opengameart.org/content/wizard-hat
+    1  https://opengameart.org/content/lpc-long-ears
+    1  https://opengameart.org/content/fruit-and-veggie-inventory
+    1  https://opengameart.org/content/lpc-children-walk-animation
+    1  https://opengameart.org/content/four-characters-my-lpc-entries
+    1  https://opengameart.org/content/sinbad-the-ogre
+    1  https://opengameart.org/content/lpc-male-sheets
+    1  https://opengameart.org/content/tower-defense-prototyping-assets-4-monsters-some-tiles-a-background-image
+    1  https://opengameart.org/content/wartotaur-4-directions
+    1  https://github.com/ElizaWy/LPC/tree/main/Characters/Head/Head%20Overlay%2001%20-%20Large%20Nose
+    1  https://opengameart.org/content/lpc-muscular-pants
+    1  https://opengameart.org/content/lpc-muscular-swing-animation
+    1  https://opengameart.org/content/lpc-muscular-hurt-animation
+    1  https://opengameart.org/content/lpc-expanded-armour
+    1  https://opengameart.org/content/dungeon-crawl-32x32-tiles
+    1  https://www.deviantart.com/7soul1/art/129892453
+    1  https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing/Feminine%2C%20Thin/Accessories
+    1  https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing/Masculine%2C%20Thin/Accessories/Neckwear%2001%20-%20Bowtie
+    1  https://opengameart.org/content/lpc-aprons
+    1  https://opengameart.org/content/lpc-clothing-updates
+    1  https://opengameart.org/content/lpc-expanded-armor
+    1  https://opengameart.org/content/lpc-bandages
+
+------------------------------------------------------------------------
+PER-FILE CREDITS
+------------------------------------------------------------------------
+
+backpack/basket/bg/walk.png
+    notes    : full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-more-backpacks
+
+backpack/basket_contents/ore/bg/walk.png
+    notes    : full submission is CC-BY-SA 3.0/GPL 3.0, but this item is CC0
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-more-backpacks
+
+backpack/basket_contents/wood/bg/walk.png
+    notes    : this item is CC-BY-SA 3.0/GPL 3.0 because it's derived from daneeklu's log
+    authors  : bluecarrot16,Daniel Eddeland (daneeklu)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-farming-tilesets-magic-animations-and-ui-elements
+    url      : https://opengameart.org/content/lpc-more-backpacks
+
+backpack/straps/female/walk.png
+    notes    : trivial adjustments by bluecarrot16 to be compatible with v3 bases
+    authors  : Benjamin K. Smith (BenCreating),macmanmatty
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-backpacks
+
+beards/beard/5oclock_shadow/walk.png
+    notes    : Original by Pennomi, repositioning by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+beards/beard/basic/walk.png
+    notes    : Original by Nemisys, repositioning by JaidynReiman.
+    authors  : JaidynReiman,Carlo Enrico Victoria (Nemisys)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-white-beard
+
+beards/beard/medium/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/beard/trimmed/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/beard/winter/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-santa
+
+beards/mustache/basic/walk.png
+    notes    : Original by Nemisys, repositioning by JaidynReiman.
+    authors  : JaidynReiman,Carlo Enrico Victoria (Nemisys)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-brunet-mustache
+
+beards/mustache/bigstache/walk.png
+    notes    : Original by Pennomi, repositioning by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+beards/mustache/chevron/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/mustache/french/walk.png
+    notes    : Original by Pennomi, repositioning by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+beards/mustache/handlebar/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/mustache/horseshoe/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/mustache/lampshade/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+beards/mustache/walrus/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+body/bodies/female/walk.png
+    notes    : see details at https://opengameart.org/content/lpc-character-bases
+    authors  : Benjamin K. Smith (BenCreating),bluecarrot16,TheraHedwig,Evert,MuffinElZangano,Durrani,Pierre Vigier (pvigier),ElizaWy,Matthew Krohn (makrohn),Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-ladies
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : https://opengameart.org/content/lpc-jump-expanded
+    url      : https://opengameart.org/content/lpc-be-seated
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://gitlab.com/vagabondgame/lpc-characters
+    url      : https://opengameart.org/content/lpc-male-jumping-animation-by-durrani
+    url      : https://opengameart.org/content/lpc-runcycle-and-diagonal-walkcycle
+
+body/bodies/skeleton/walk.png
+    authors  : bluecarrot16,Napsio,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-skeleton
+    url      : https://opengameart.org/content/lpc-character-bases
+
+body/bodies/zombie/walk.png
+    authors  : Stephen Challener (Redshrike),Johannes Sjölund (wulax),Sander Frenken (castelonia),Benjamin K. Smith (BenCreating),bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-zombie
+    url      : https://opengameart.org/content/lpc-character-bases
+
+body/tail/cat/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+body/tail/fluffy/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+body/tail/lizard/adult/bg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, additional animations added by JaidynReiman
+    authors  : Nila122,bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+
+body/tail/lizard/adult/fg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, additional animations added by JaidynReiman
+    authors  : Nila122,bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+
+body/tail/lizard/alt/adult/bg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, additional animations added by JaidynReiman
+    authors  : Nila122,bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+
+body/tail/wolf/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+body/wings/bat/adult/bg/walk.png
+    notes    : Original by ElizaWy, added to most remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/bat/lizard/adult/bg/walk.png
+    notes    : Original by ElizaWy, added to most remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/bat/lizard/adult/fg/walk.png
+    notes    : Original by ElizaWy, added to most remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/dragonfly/solid/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings-pack-2
+
+body/wings/dragonfly/transparent/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings-pack-2
+
+body/wings/feathered/adult/bg/walk.png
+    notes    : Original by ElizaWy, added to most remaining frames by JaidynReiman
+    authors  : ElizaWy,Stephen Challener (Redshrike),JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/lizard/adult/bg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, sit/jump/run/emote/revised combat by JaidynReiman
+    authors  : JaidynReiman,Nila122,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/lizard/adult/fg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, sit/jump/run/emote/revised combat by JaidynReiman
+    authors  : JaidynReiman,Nila122,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/lizard/alt/adult/bg/walk.png
+    notes    : edited for v3 bases and recolored by bluecarrot16, sit/jump/run/emote/revised combat by JaidynReiman
+    authors  : JaidynReiman,Nila122,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-wings-new-animations
+
+body/wings/lunar/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings-pack-2
+
+body/wings/monarch/base/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings
+
+body/wings/monarch/dots/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings
+
+body/wings/monarch/edge/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings
+
+body/wings/pixie/solid/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings
+
+body/wings/pixie/transparent/bg/walk.png
+    notes    : In dedication to my grandmother, Sharon Rowe
+    authors  : The Foreman
+    licenses : OGA-BY 4.0,CC-BY-SA 4.0
+    url      : https://opengameart.org/content/lpc-fairy-wings
+
+cape/solid/bg/walk.png
+    authors  : Nila122,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/lpc-roman-armor
+
+cape/solid/fg/walk.png
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/lpc-roman-armor
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+cape/tattered/bg/walk.png
+    authors  : Nila122,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/lpc-roman-armor
+
+cape/tattered/fg/walk.png
+    authors  : Nila122,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/lpc-roman-armor
+
+cape/trim/walk.png
+    notes    : isolated stripe from cape_trimmed, adapted to v3 bases by bluecarrot16
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+dress/bodice/female/walk.png
+    notes    : original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16
+    authors  : bluecarrot16,Matthew Krohn (makrohn),Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-dress-in-combat-poses
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+dress/kimono/normal/trim/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/normal/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/sleeves/trim/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/sleeves/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/sleeves_oversize/trim/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/sleeves_oversize/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/split/trim/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/kimono/split/universal/female/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+dress/sash/female/walk.png
+    notes    : adapted to v3 bases and recolored by bluecarrot16
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+
+dress/slit/female/walk.png
+    notes    : original **TightDress** by Nila122, by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16
+    authors  : Nila122,ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+eyes/cyclops/adult/walk.png
+    notes    : original by kirts, repositioned by JaidynReiman
+    authors  : kirts,JaidynReiman
+    licenses : CC0
+    url      : https://opengameart.org/content/cyclops-and-his-eye
+
+eyes/cyclops2/adult/walk.png
+    notes    : original by kirts, repositioned by JaidynReiman along with shading and recolors
+    authors  : kirts,JaidynReiman
+    licenses : CC0
+    url      : https://opengameart.org/content/cyclops-and-his-eye
+
+eyes/eyebrows/thick/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+eyes/eyebrows/thin/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+facial/earrings/emerald/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+facial/earrings/moon/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+facial/earrings/pear/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+facial/earrings/princess/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+facial/earrings/simple/left/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-pirates
+
+facial/earrings/simple/right/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-pirates
+
+facial/earrings/stud/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+facial/glasses/glasses/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Head%20Accessories
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+facial/glasses/halfmoon/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Head%20Accessories
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+facial/glasses/nerd/adult/walk.png
+    notes    : Original by Pennomi, repositioning and recolors by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+facial/glasses/round/adult/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    url      : https://opengameart.org/content/lpc-gentleman
+
+facial/glasses/secretary/adult/walk.png
+    notes    : Original by Pennomi, repositioning and recolors by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+facial/glasses/shades/adult/walk.png
+    notes    : Original by Pennomi, repositioning and recolors by JaidynReiman.
+    authors  : JaidynReiman,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+facial/glasses/sunglasses/adult/walk.png
+    authors  : Michael Whitlock (bigbeargames),Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/masks/plain/adult/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-masks
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/monocle/left/adult/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/monocle/left/frame/adult/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/monocle/right/adult/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/monocle/right/frame/adult/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/clothing-facial-features-and-ui-elements
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/patches/eyepatch/ambi/adult/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/patches/eyepatch/left/adult/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/patches/eyepatch/right/adult/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/patches/eyepatch2/left/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Head%20Accessories
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+facial/patches/eyepatch2/right/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Head%20Accessories
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+facial/patches/small/left/adult/walk.png
+    authors  : Michael Whitlock (bigbeargames),Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+facial/patches/small/right/adult/walk.png
+    authors  : Michael Whitlock (bigbeargames),Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+feet/accessory/plate_toe/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/accessory/plate_toe_thick/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/armour/plate/thin/walk.png
+    notes    : original by wulax, recolors by bigbeargames, edits for v3 base and recolors by bluecarrot16
+    authors  : Matthew Krohn (makrohn),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+feet/boots/basic/thin/walk.png
+    notes    : original by Nila122, edited for v3 bases by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/boots/fold/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/boots/revised/thin/walk.png
+    notes    : original by ElizaWy, remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/boots/rimmed/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/hoofs/thin/walk.png
+    notes    : original by Evert, color cleanup/minor fixes/climb/jump/sit/emote by JaidynReiman
+    authors  : JaidynReiman,Evert
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-faun-and-minotaur
+
+feet/sandals/thin/walk.png
+    notes    : edited for v3 bases by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : Nila122,JaidynReiman,Matthew Krohn (makrohn),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-roman-armor
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/shoes/basic/thin/walk.png
+    notes    : original by wulax, edited for female base by Joe White, edited for v3 base by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : JaidynReiman,Joe White,Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/shoes/ghillies/thin/walk.png
+    notes    : original by pennomi, laetissima and makrohn; edited for v3 bases by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/shoes/revised/thin/walk.png
+    notes    : original by ElizaWy, remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/shoes/sara/thin/walk.png
+    notes    : LPC Sara by Redshrike, contributed by William Thompsonj, Shoes Separated by Bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : JaidynReiman,Bluecarrot16,Mandi Paugh,Stephen Challener (Redshrike),William.Thompsonj
+    licenses : OGA-BY 3.0,CC-BY 3.0+,GPL 2.0,GPL 3.0
+    url      : http://opengameart.org/content/sara-wizard
+    url      : https://opengameart.org/content/lpc-sara
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/slippers/thin/walk.png
+    notes    : original by Luke Mehl, Joe White did thrust/shoot animations, edited for v3 bases and male sprites by bluecarrot16, Jump/Sit/Emote/Run/Revised Combat by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,Joe White,Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/thin-mage-clothing-set
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/socks/ankle/thin/walk.png
+    notes    : original by ElizaWy, remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/socks/high/thin/walk.png
+    notes    : original by ElizaWy, remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+feet/socks/tabi/thin/walk.png
+    authors  : JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+    url      : https://opengameart.org/content/lpc-expanded-socks-shoes
+
+hair/afro/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/balding/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/bangs/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bangs_bun/adult/walk.png
+    notes    : Original by bluecarrot16, animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/bangslong/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bangslong2/adult/bg/walk.png
+    authors  : JaidynReiman,Barbara Riviera,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/concept-art-for-lpc-entry
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bangslong2/adult/fg/walk.png
+    authors  : JaidynReiman,Barbara Riviera,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/concept-art-for-lpc-entry
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bangsshort/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bedhead/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bob/adult/walk.png
+    notes    : Original by bluecarrot16. Edited and animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/bob_side_part/adult/walk.png
+    notes    : Original by Thecilekli. Touchups by BlueCarrot16. Edited and animated by ElizaWy.
+    authors  : thecilekli,bluecarrot16,ElizaWy
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-pink-short-hair
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/braid/adult/bg/walk.png
+    authors  : Nila122,ElizaWy
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0,GPL 2.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/braid/adult/fg/walk.png
+    authors  : Nila122,ElizaWy
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0,GPL 2.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/braid2/adult/bg/walk.png
+    notes    : (lidia)
+    authors  : Yamilian,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-heroine
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/braid2/adult/fg/walk.png
+    notes    : (lidia)
+    authors  : Yamilian,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-heroine
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/bunches/adult/bg/walk.png
+    authors  : JaidynReiman,Barbara Riviera,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/concept-art-for-lpc-entry
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/bunches/adult/fg/walk.png
+    authors  : JaidynReiman,Barbara Riviera,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/concept-art-for-lpc-entry
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/buzzcut/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/cornrows/adult/walk.png
+    notes    : Original by bluecarrot16, animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/cowlick/adult/walk.png
+    notes    : Original by bluecarrot16, animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/cowlick_tall/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/curls_large/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0+
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/curls_large/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0+
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/curls_large_xlong/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0+
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/curls_large_xlong/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0+
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/curly_long/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/curly_short/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/curly_short2/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/curtains/adult/walk.png
+    notes    : (star)
+    authors  : Mandi Paugh,bluecarrot16
+    licenses : GPL 2.0,GPL 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/star-overland
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/curtains_long/adult/walk.png
+    notes    : (trevor)
+    authors  : Mandi Paugh,bluecarrot16
+    licenses : GPL 2.0,GPL 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/trevor-overland
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/dreadlocks_long/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/dreadlocks_short/adult/walk.png
+    notes    : Original by bluecarrot16. Animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/extensions/bangs/braidl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+
+hair/extensions/bangs/braidr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+
+hair/extensions/bangs/long_straightl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-long-hair
+
+hair/extensions/bangs/long_straightr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-long-hair
+
+hair/extensions/bangs/long_wavyl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-long-hair
+
+hair/extensions/bangs/long_wavyr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-long-hair
+
+hair/extensions/bangs/xlong_bangl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_bangr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_braidl/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_braidl/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_braidr/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_braidr/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_curlyl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_curlyr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_wavyl/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/bangs/xlong_wavyr/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/ponytails/relm_ponytail/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/ponytails/relm_ponytail/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/extensions/ponytails/topknot_long/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+
+hair/extensions/ponytails/topknot_long/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+
+hair/extensions/ponytails/topknot_short/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+
+hair/extensions/ties/high_bun/adult/walk.png
+    notes    : Custom by JaidynReiman
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/flat_top_fade/adult/walk.png
+    notes    : Original by bluecarrot16, animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/flat_top_straight/adult/walk.png
+    notes    : Original by bluecarrot16, animated by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/half_up/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/halfmessy/adult/walk.png
+    authors  : Nila122,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0,GPL 2.0
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/high_and_tight/adult/walk.png
+    authors  : Skorpio,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/high_ponytail/adult/bg/walk.png
+    authors  : JaidynReiman,ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/high_ponytail/adult/fg/walk.png
+    authors  : JaidynReiman,ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/idol/adult/walk.png
+    notes    : Original CC0 by Thecilekli. Edited by bluecarrot16 and ElizaWy. Animated by ElizaWy.
+    authors  : thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-korean-idol-hairstyle-male-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/jewfro/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+
+hair/lob/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/long_band/adult/bg/walk.png
+    authors  : Mandi Paugh,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/fantasy-rpg-npcs
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_band/adult/fg/walk.png
+    authors  : Mandi Paugh,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/fantasy-rpg-npcs
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_center_part/adult/bg/walk.png
+    authors  : thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-long-straight-hair-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_center_part/adult/fg/walk.png
+    authors  : thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-long-straight-hair-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_messy/adult/walk.png
+    notes    : (puck)
+    authors  : Mandi Paugh,bluecarrot16
+    licenses : GPL 2.0,GPL 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/puck-overland
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_messy2/adult/walk.png
+    notes    : (shura)
+    authors  : Yamilian,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-heroine-2
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/long_straight/adult/walk.png
+    authors  : JaidynReiman,thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-long-straight-hair-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/long_tied/adult/bg/walk.png
+    authors  : JaidynReiman,thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-long-tied-hair-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/long_tied/adult/fg/walk.png
+    authors  : JaidynReiman,thecilekli,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-long-tied-hair-with-12-colors
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/longhawk/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/loose/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/messy1/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/messy2/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/messy3/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/mop/adult/walk.png
+    notes    : (george)
+    authors  : Radomir Dopieralski,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/alternate-lpc-character-sprites-george
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/natural/adult/walk.png
+    notes    : Original by bluecarrot16, animations by ElizaWy.
+    authors  : ElizaWy,bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://github.com/ElizaWy/LPC/blob/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/page/adult/walk.png
+    authors  : Page,Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/page2/adult/walk.png
+    notes    : Original by Johannes Sjölund (wulax). Edited, animated, and recolored by ElizaWy.
+    authors  : JaidynReiman,ElizaWy,Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/parted/adult/walk.png
+    notes    : down 4 and 5 added by JaidynReiman; recolors by Joe White; original by Manuel Riecke (MrBeast)
+    authors  : JaidynReiman,Joe White,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/parted2/adult/walk.png
+    authors  : Skorpio,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-skorpios-scifi-sprite-pack
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/parted3/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Hair
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+hair/parted_side_bangs/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+
+hair/parted_side_bangs2/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+
+hair/pigtails/adult/walk.png
+    notes    : (betty)
+    authors  : Radomir Dopieralski,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/one-more-lpc-alternate-character
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/pigtails_bangs/adult/walk.png
+    notes    : (astarea)
+    authors  : Emilio J. Sanchez-Sierra,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/steampun-a-fy-with-concept-art
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/pixie/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/plain/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast),Joe White
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/ponytail-and-plain-hairstyles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/ponytail/adult/bg/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/ponytail/adult/fg/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/ponytail2/adult/bg/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast),Joe White
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/ponytail-and-plain-hairstyles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/ponytail2/adult/fg/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast),Joe White
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/ponytail-and-plain-hairstyles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/princess/adult/bg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/princess/adult/fg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/relm_ponytail/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/relm_ponytail/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/relm_ponytail/adult/mg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/relm_short/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+
+hair/relm_xlong/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/relm_xlong/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/sara/adult/bg/walk.png
+    authors  : Stephen Challener (Redshrike),William.Thompsonj,Mandi Paugh,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/lpc-sara
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/sara/adult/fg/walk.png
+    authors  : Stephen Challener (Redshrike),William.Thompsonj,Mandi Paugh,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/lpc-sara
+    url      : https://opengameart.org/content/lpc-hair
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/shorthawk/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/shoulderl/adult/bg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/shoulderl/adult/fg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/shoulderr/adult/bg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/shoulderr/adult/fg/walk.png
+    authors  : JaidynReiman,Lanea Zimmerman (Sharm),Manuel Riecke (MrBeast)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/c32ce8a7edd9fc7fe7daa62a39cf64e5946020a2
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/single/adult/bg/walk.png
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/single/adult/fg/walk.png
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/spiked/adult/walk.png
+    authors  : kcilds/Rocetti/Eredah
+    licenses : CC-BY 4.0
+    url      : https://opengameart.org/content/eredah-rpg-character-base-48x64-ongoing
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/spiked2/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/spiked_beehive/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/spiked_liberty/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/spiked_liberty2/adult/walk.png
+    authors  : Cobra Hubbard (BlueVortexGames),bluecarrot16
+    licenses : CC-BY 3.0
+    url      : https://opengameart.org/content/anime-lpc-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/spiked_porcupine/adult/walk.png
+    authors  : Fabzy,bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/swoop/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/swoop_side/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-1-hairstyle-2-hair-extensions-3-previously-unofficially-released-hairstyles
+    url      : https://github.com/jrconway3/Universal-LPC-spritesheet/commit/46ddcf05a0e43e7aa6ffd47d350eef0eb529ac24
+
+hair/twists_fade/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/twists_straight/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hair
+
+hair/unkempt/adult/walk.png
+    authors  : JaidynReiman,Manuel Riecke (MrBeast)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/wavy/adult/bg/walk.png
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/wavy/adult/fg/walk.png
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+    url      : https://opengameart.org/content/lpc-expanded-hair
+
+hair/wavy/child/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/3-hairs-for-lpc
+
+hair/xlong/adult/bg/walk.png
+    notes    : Original by Nila122; cleaned up, resplit into separate layers, and added jump/run/sit/revised combat by JaidynReiman
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/xlong/adult/fg/walk.png
+    notes    : Original by Nila122; cleaned up, resplit into separate layers, and added jump/run/sit/revised combat by JaidynReiman
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/xlong_wavy/adult/bg/walk.png
+    notes    : Custom by JaidynReiman; inspiration for spellcast frames from Nila122's XLong
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hair/xlong_wavy/adult/fg/walk.png
+    notes    : Custom by JaidynReiman; inspiration for spellcast frames from Nila122's XLong
+    authors  : JaidynReiman,Nila122
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-expanded-xlong-hair
+
+hat/cloth/bandana/adult/walk.png
+    authors  : Matthew Krohn (makrohn),JaidynReiman,Marcel van de Steeg (MadMarcel),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://github.com/makrohn/Universal-LPC-spritesheet/commit/f50007cb47c235d8896cafae7a613f0b6a9a09a8?short_path=02b86d4#diff-02b86d45789a3e3e8e79519c7d17d15c9e6ecc9b4ddecb1bcd8dfbbaef430b75
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/bandana2/adult/walk.png
+    authors  : Napsio (Vitruvian Studio),JaidynReiman,Michael Whitlock (bigbeargames),Matthew Krohn (makrohn),Marcel van de Steeg (MadMarcel)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://github.com/makrohn/Universal-LPC-spritesheet/commit/f50007cb47c235d8896cafae7a613f0b6a9a09a8?short_path=02b86d4#diff-02b86d45789a3e3e8e79519c7d17d15c9e6ecc9b4ddecb1bcd8dfbbaef430b75
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/hijab/thin/walk.png
+    authors  : thecilekli
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-hijab
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/hood/adult/walk.png
+    notes    : Brown hood by Wulax, original black/white recolors by ??, mapped to idle/run/jump/revised combat by JaidynReiman, along with additional recolors.
+    authors  : Johannes Sjölund (wulax),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/hood_sack/adult/walk.png
+    notes    : original by Nila122, adapted to human heads by JaidynReiman
+    authors  : Nila122,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/leather_cap/adult/walk.png
+    notes    : original by Johannes Sjölund (wulax), female by Matthew Krohn, mapped to all frames w/recolors by JaidynReiman
+    authors  : Johannes Sjölund (wulax),Matthew Krohn (Makrohn),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/cloth/leather_cap/feather/adult/walk.png
+    notes    : original by Johannes Sjölund (wulax), female by Matthew Krohn, mapped to all frames w/recolors by JaidynReiman
+    authors  : Johannes Sjölund (wulax),Matthew Krohn (Makrohn),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/formal/bowler/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/formal/crown/adult/walk.png
+    authors  : DarkwallLKE,Charles Sanchez (CharlesGabriel)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-crown
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/formal/tiara/adult/walk.png
+    authors  : Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/female-mage-clothing-set
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/formal/tophat/adult/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/headband/hairtie/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/headband/hairtie/rune/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/headband/thick/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/headband/thick/rune/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-relm-hair-xlong-ponytail
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/headband/tied/adult/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/holiday/christmas/adult/walk.png
+    notes    : Santa/Elf Hat by bluecarrot16, untrimmed Santa Hat by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-santa
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/holiday/elf/adult/walk.png
+    notes    : Christmas Elf by bluecarrot16, split into layers by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-santa
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/holiday/santa/adult/walk.png
+    notes    : Santa Hat by bluecarrot16, split into layers by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-santa
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/celestial/adult/walk.png
+    notes    : Original by Tracy, Adapted to ULPC by Big Bear Games, reduced colors by Napsio
+    authors  : Napsio (Vitruvian Studio),Michael Whitlock (bigbeargames),Tracy
+    licenses : CC-BY 3.0
+    url      : https://opengameart.org/content/lpc-celestial-wizard-hats
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/celestial/trim/adult/walk.png
+    notes    : Original by Tracy, Adapted to ULPC by Big Bear Games, reduced colors by Napsio, second color layer by JaidynReiman
+    authors  : Napsio (Vitruvian Studio),JaidynReiman,Michael Whitlock (bigbeargames),Tracy
+    licenses : CC-BY 3.0
+    url      : https://opengameart.org/content/lpc-celestial-wizard-hats
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/celestial_moon/adult/walk.png
+    notes    : sheet_definitions/hat_magic_celestial.json
+    authors  : Napsio (Vitruvian Studio),Michael Whitlock (bigbeargames),Tracy
+    licenses : CC-BY 3.0
+    url      : https:/opengameart.org/content/lpc-celestial-wizard-hats
+    url      : https:/opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/celestial_moon/trim/adult/walk.png
+    notes    : sheet_definitions/hat_magic_celestial.json
+    authors  : Napsio (Vitruvian Studio),Michael Whitlock (bigbeargames),Tracy
+    licenses : CC-BY 3.0
+    url      : https:/opengameart.org/content/lpc-celestial-wizard-hats
+    url      : https:/opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/large/adult/walk.png
+    authors  : Stafford McIntyre,PlatForge project,Evert
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/wizard-2
+    url      : https://opengameart.org/content/wizard-hat
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/wizard/base/adult/walk.png
+    notes    : Original Wizard Hat and Recolors by bigbeargames and reemax; split into separate layers with new recolors by JaidynReiman
+    authors  : Michael Whitlock (bigbeargames),Tuomo Untinen (reemax),JaidynReiman
+    licenses : CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-items-and-game-effects
+    url      : https://opengameart.org/content/lpc-pointed-hats
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/wizard/belt/adult/walk.png
+    notes    : Original Wizard Hat and Recolors by bigbeargames and reemax; split into separate layers with new recolors by JaidynReiman
+    authors  : Michael Whitlock (bigbeargames),Tuomo Untinen (reemax),JaidynReiman
+    licenses : CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-items-and-game-effects
+    url      : https://opengameart.org/content/lpc-pointed-hats
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/magic/wizard/buckle/adult/walk.png
+    notes    : Original Wizard Hat and Recolors by bigbeargames and reemax; split into separate layers with new recolors by JaidynReiman
+    authors  : Michael Whitlock (bigbeargames),Tuomo Untinen (reemax),JaidynReiman
+    licenses : CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-items-and-game-effects
+    url      : https://opengameart.org/content/lpc-pointed-hats
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bandana/adult/walk.png
+    notes    : Original Bandana by Fabzy, Pirate Version by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,Fabzy
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bandana/skull/adult/walk.png
+    notes    : Original Bandana by Fabzy, Pirate Version by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,Fabzy
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/the-revolution-hair
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/admiral/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/admiral/cockade/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/admiral/trim/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/basic/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/basic/skull/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, Pirate Skull mapped to Basic Athwart by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/captain/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/captain/skull/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/commodore/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/athwart/commodore/trim/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/foreaft/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/foreaft/commodore/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bicorne/foreaft/commodore/trim/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bonnie/adult/walk.png
+    notes    : Bonnie Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bonnie/feather/adult/walk.png
+    notes    : Bonnie Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bonnie/tilt/adult/walk.png
+    notes    : Bonnie Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/bonnie/trim/adult/walk.png
+    notes    : Bonnie Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/cavalier/adult/walk.png
+    notes    : Cavalier Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/cavalier/feather/adult/walk.png
+    notes    : Cavalier Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/kerchief/adult/walk.png
+    notes    : original Kerchief by Nila122, recolors by bluecarrot16, more frames by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/basic/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/basic/stitching/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/basic/thatching/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/captain/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/captain/skull/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/captain/trim/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/lieutenant/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+hat/pirate/tricorne/lieutenant/trim/adult/walk.png
+    notes    : Pirate Hat by Bluecarrot16, layers and added animations by JaidynReiman
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-expanded-hats-facial-helmets
+
+head/ears/avyon/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/avyon/skin/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/big/adult/walk.png
+    notes    : adapted to v3 base by bluecarrot16; expanded to other animations and child by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+head/ears/cat/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/cat/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/cat/skin/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/cat/skin/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/down/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-new-elven-ear-variants
+
+head/ears/dragon/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-new-elven-ear-variants
+
+head/ears/elven/adult/walk.png
+    notes    : adapted to v3 base by bluecarrot16; expanded to other animations and child by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn),JaidynReiman
+    licenses : GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+head/ears/hang/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-new-elven-ear-variants
+
+head/ears/long/adult/walk.png
+    notes    : adapted to v3 base by bluecarrot16; expanded to other animations and child by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-long-ears
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+head/ears/lykon/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/lykon/skin/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/medium/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-new-elven-ear-variants
+
+head/ears/wolf/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/wolf/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/wolf/skin/adult/bg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/wolf/skin/adult/fg/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/zabos/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/ears/zabos/skin/adult/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-furry-ears-tails-for-rpg-sprites
+
+head/fins/fin/adult/walk.png
+    notes    : adapted to v3 base by bluecarrot16
+    authors  : bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+head/fins/fin_short/adult/walk.png
+    notes    : adapted to v3 base by bluecarrot16
+    authors  : bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+head/heads/alien/adult/walk.png
+    notes    : based on lizard originally by Nila122, modified by BenCreating, further edited by bluecarrot16. Nila122 gave blanket permission to MedicineStorm to use Nila122's LPC assets under OGA-BY 3.0 (where original or derived only from other works under OGA-BY).
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/boarman/adult/walk.png
+    notes    : pig by daneeklu adapted to boarman by BenCreating, placed to v3 bases by bluecarrot16
+    authors  : Benjamin K. Smith (BenCreating),Daniel Eddeland (daneeklu)
+    licenses : CC-BY 3.0,GPL 2.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : https://opengameart.org/content/lpc-wild-boar
+    url      : https://opengameart.org/content/lpc-boarman
+
+head/heads/boarman/child/walk.png
+    notes    : pig by daneeklu adapted to boarman by BenCreating, adapted to child version by bluecarrot16
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Daniel Eddeland (daneeklu)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : https://opengameart.org/content/lpc-wild-boar
+    url      : https://opengameart.org/content/lpc-boarman
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/frankenstein/adult/walk.png
+    notes    : original head by Redshrike, frankenstein's monster version by bluecarrot16
+    authors  : Stephen Challener (Redshrike),bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/goblin/adult/walk.png
+    notes    : original goblin by Redshrike, commisioned by William.Thomsponj; modular head extracted and enlarged by bluecarrot16
+    authors  : bluecarrot16,Stephen Challener (Redshrike),William.Thomsponj
+    licenses : OGA-BY 3.0,CC-BY 4.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-goblin
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/goblin/child/walk.png
+    notes    : original goblin by Redshrike, commisioned by William.Thomsponj; modular head extracted and slightly modified by bluecarrot16
+    authors  : bluecarrot16,Stephen Challener (Redshrike),William.Thomsponj
+    licenses : OGA-BY 3.0,CC-BY 4.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-goblin
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/human/child/walk.png
+    authors  : Stephen Challener (Redshrike),kheftel,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/
+    url      : https://opengameart.org/content/lpc-child-standing-template
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/human/elderly_small/walk.png
+    notes    : original head by Redshrike, elderly & reduced size head by ElizaWy
+    authors  : ElizaWy,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY
+
+head/heads/human/female/walk.png
+    notes    : original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/human/female_elderly/walk.png
+    authors  : Benjamin K. Smith (BenCreating),Eliza Wyatt (ElizaWy),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-revised-elders
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/human/female_small/walk.png
+    notes    : original head by Redshrike, reduced size head by ElizaWy
+    authors  : ElizaWy,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY
+
+head/heads/human/male/walk.png
+    notes    : original head by Redshrike, tweaks by BenCreating, modular version by bluecarrot16
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/human/male_elderly/walk.png
+    authors  : Benjamin K. Smith (BenCreating),Eliza Wyatt (ElizaWy),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-revised-elders
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/human/male_gaunt/walk.png
+    notes    : original head by Redshrike, gaunt version by bluecarrot16
+    authors  : Stephen Challener (Redshrike),bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/human/male_plump/walk.png
+    notes    : original head by Redshrike, plump version by ??
+    authors  : Stephen Challener (Redshrike),??
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/human/male_small/walk.png
+    notes    : original head by Redshrike, reduced size head by ElizaWy
+    authors  : ElizaWy,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY
+
+head/heads/jack/adult/walk.png
+    notes    : original pumpkin by Joshua Taylor, modified to head by bluecarrot16
+    authors  : bluecarrot16,Joshua Taylor
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/fruit-and-veggie-inventory
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/lizard/child/walk.png
+    notes    : original lizard/drake by Nila122, reworked by BenCreating, modular head and further revisions by bluecarrot16, child version by bluecarrot16. Nila122 gave blanket permission to MedicineStorm to use Nila122's LPC assets under OGA-BY 3.0 (where original or derived only from other works under OGA-BY).
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/lizard/female/walk.png
+    notes    : original lizard/drake by Nila122, reworked by BenCreating, modular head and further revisions by bluecarrot16. Nila122 gave blanket permission to MedicineStorm to use Nila122's LPC assets under OGA-BY 3.0 (where original or derived only from other works under OGA-BY).
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/lizard/male/walk.png
+    notes    : original lizard/drake by Nila122, reworked by BenCreating, modular head and further revisions by bluecarrot16. Nila122 gave blanket permission to MedicineStorm to use Nila122's LPC assets under OGA-BY 3.0 (where original or derived only from other works under OGA-BY).
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/drakes-and-lizardfolk
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/minotaur/child/walk.png
+    notes    : original cow by daneeklu, combined with horns by Nila122 and adapted to minotaur by Evert; child version by bluecarrot16
+    authors  : bluecarrot16,Evert,Nila122,Daniel Eddeland (daneeklu)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : https://opengameart.org/content/lpc-faun-and-minotaur
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/minotaur/female/walk.png
+    notes    : original cow by daneeklu, adapted to minotaur by Evert, female version modified by bluecarrot16 to remove horns
+    authors  : bluecarrot16,Evert,Daniel Eddeland (daneeklu)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : https://opengameart.org/content/lpc-faun-and-minotaur
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/minotaur/male/walk.png
+    notes    : original cow by daneeklu, combined with horns by Nila122 and adapted to minotaur by Evert
+    authors  : Evert,Nila122,Daniel Eddeland (daneeklu)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+    url      : https://opengameart.org/content/lpc-faun-and-minotaur
+
+head/heads/mouse/adult/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, modified to mouse head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/mouse/child/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, modified to mouse head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/orc/child/walk.png
+    notes    : child base by kheftel, orc version created by Nila122, head extracted by bluecarrot16
+    authors  : Nila122,kheftel,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-child-standing-template
+    url      : https://opengameart.org/content/lpc-children-walk-animation
+
+head/heads/orc/female/walk.png
+    notes    : human head adapted to orc by madmarcel, hurt/cast animations made by makrohn, headless version and tweaks by bluecarrot16
+    authors  : bluecarrot16,Matthew Krohn (makrohn),Marcel van de Steeg (MadMarcel),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-ladies
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/orc/male/walk.png
+    notes    : Sinbad the ogre design by Zi Ye, original 4-direction sprite by Redshrike, additional hurt/cast animations by makrohn, headless version by bluecarrot16
+    authors  : bluecarrot16,Matthew Krohn (makrohn),Stephen Challener (Redshrike),Zi Ye
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/four-characters-my-lpc-entries
+    url      : https://opengameart.org/content/sinbad-the-ogre
+    url      : https://opengameart.org/content/lpc-male-sheets
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/pig/adult/walk.png
+    notes    : original pig by daneeklu, adapted to modular head by bluecarrot16
+    authors  : bluecarrot16,Daniel Eddeland (daneeklu)
+    licenses : CC-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/pig/child/walk.png
+    notes    : original pig by daneeklu, adapted to modular head by bluecarrot16
+    authors  : bluecarrot16,Daniel Eddeland (daneeklu)
+    licenses : CC-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/rabbit/adult/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/rabbit/child/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/rat/adult/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, modified to rat by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/rat/child/walk.png
+    notes    : original rabbit by Redshrike, adapted to modular head by bluecarrot16, modified to rat by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Stephen Challener (Redshrike),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/bunny-rabbit-lpc-style-for-pixelfarm
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/sheep/adult/walk.png
+    notes    : original sheep by daneeklu, adapted to modular head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Daniel Eddeland (daneeklu),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : CC-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/sheep/child/walk.png
+    notes    : original sheep by daneeklu, adapted to modular head by bluecarrot16, color reduction by napsio (Vitruvian Studio) and JaidynReiman
+    authors  : bluecarrot16,Daniel Eddeland (daneeklu),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : CC-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-style-farm-animals
+    url      : http://opengameart.org/content/lpc-folk
+
+head/heads/skeleton/adult/walk.png
+    authors  : bluecarrot16,Napsio,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-skeleton
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/troll/adult/walk.png
+    notes    : original **Muscleman/Ogre/Minotaur** by Reemax, modified to **Troll** by AntumDeluge, edited to LPC style and converted to modular head by bluecarrot16
+    authors  : bluecarrot16,AntumDeluge,Tuomo Untinen (reemax)
+    licenses : CC-BY 3.0
+    url      : https://opengameart.org/content/musclemanogreminotaur
+    url      : https://opengameart.org/content/trolls-0
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/troll/child/walk.png
+    notes    : original **Muscleman/Ogre/Minotaur** by Reemax, modified to **Troll** by AntumDeluge, edited to LPC style and converted to modular head by bluecarrot16; child version by bluecarrot16
+    authors  : bluecarrot16,AntumDeluge,Tuomo Untinen (reemax)
+    licenses : CC-BY 3.0
+    url      : https://opengameart.org/content/musclemanogreminotaur
+    url      : https://opengameart.org/content/trolls-0
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/vampire/adult/walk.png
+    notes    : original head by Redshrike, gaunt version by bluecarrot16, vampire fangs by bluecarrot16
+    authors  : Stephen Challener (Redshrike),bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/wartotaur/adult/walk.png
+    notes    : original **wart-o-taur** concept and sprite by Redshrike, extended to 4 directions and head extracted by Evert, cleanup and hurt/cast animations by bluecarrot16
+    authors  : bluecarrot16,Evert,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY 3.0
+    url      : https://opengameart.org/content/tower-defense-prototyping-assets-4-monsters-some-tiles-a-background-image
+    url      : https://opengameart.org/content/wartotaur-4-directions
+    url      : https://opengameart.org/content/lpc-folk
+
+head/heads/wolf/child/walk.png
+    notes    : original wolf animation by Redshrike, commissioned by William.Thompsonj; wolfman sprite by BenCreating, commissioned by castelonia; child version by bluecarrot16
+    authors  : bluecarrot16,Sander Frenken (castelonia),Benjamin K. Smith (BenCreating),William.Thompsonj,Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-wolf-animation
+    url      : https://opengameart.org/content/lpc-wolfman
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/wolf/female/walk.png
+    notes    : original wolf animation by Redshrike, commissioned by William.Thompsonj; wolfman sprite by BenCreating, commissioned by castelonia; tweaks and headless version by bluecarrot16
+    authors  : bluecarrot16,Sander Frenken (castelonia),Benjamin K. Smith (BenCreating),William.Thompsonj,Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-wolf-animation
+    url      : https://opengameart.org/content/lpc-wolfman
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/wolf/male/walk.png
+    notes    : original wolf animation by Redshrike, commissioned by William.Thompsonj; wolfman sprite by BenCreating, commissioned by castelonia; tweaks and headless version by bluecarrot16
+    authors  : bluecarrot16,Sander Frenken (castelonia),Benjamin K. Smith (BenCreating),William.Thompsonj,Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-wolf-animation
+    url      : https://opengameart.org/content/lpc-wolfman
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/heads/zombie/adult/walk.png
+    authors  : bluecarrot16,Benjamin K. Smith (BenCreating),Sander Frenken (castelonia),Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-zombie
+    url      : https://opengameart.org/content/lpc-character-bases
+
+head/horns/backwards/adult/bg/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+
+head/horns/backwards/adult/fg/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+
+head/horns/curled/adult/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-lizard-headgear
+
+head/nose/big/adult/walk.png
+    authors  : Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+head/nose/button/adult/walk.png
+    authors  : Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+head/nose/elderly/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-revised-elders
+
+head/nose/large/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Head/Head%20Overlay%2001%20-%20Large%20Nose
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+head/nose/straight/adult/walk.png
+    authors  : Thane Brimhall (pennomi),laetissima,Matthew Krohn (makrohn)
+    licenses : GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-base-character-expressions
+
+head/wrinkles/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+
+legs/armour/plate/thin/walk.png
+    notes    : reduced to 7 colors an adapted to v3 bases by bluecarrot16, climb/jump/sit/emote/run by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,Michael Whitlock (bigbeargames),Matthew Krohn (makrohn),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+legs/cuffed/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, original cuffed pants by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/formal/thin/walk.png
+    notes    : Original pants by Stephen Challener (Redshrike), thrust/shoot bases by Wulax, Formal Pants by Bluecarrot16, Female/Thin version by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,ElizaWy,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/formal_striped/thin/walk.png
+    notes    : Original pants by Stephen Challener (Redshrike), thrust/shoot bases by Wulax, Striped Formal Pants by Bluecarrot16, Female/Thin version by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman,ElizaWy,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/hose/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, original by ElizaWy, remaining frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/leggings/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, adapted from sara's leggings to v3 bases by bluecarrot16, jump/run/sit by JaidynReiman based on ElizaWy's and modified to match
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Mandi Paugh,William.Thompsonj,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/sara-wizard
+    url      : https://opengameart.org/content/lpc-sara
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/leggings2/thin/walk.png
+    notes    : original by ElizaWy, remaining frames
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/pantaloons/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, Original Pantaloons by Nila122, Female/Teen version by JaidynReiman
+    authors  : Nila122,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/pants/child/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-for-children
+
+legs/pants/muscular/walk.png
+    notes    : original muscular pants by ElizaWy, muscular by dalonedrau, cast and thrust frames by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,dalonedrau,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-muscular-pants
+    url      : https://opengameart.org/content/lpc-muscular-swing-animation
+    url      : https://opengameart.org/content/lpc-muscular-hurt-animation
+
+legs/pants/pregnant/walk.png
+    notes    : original male pants by wulax; edited for female by Joe White; recolors by JaidynReiman; walkcycle adapted to pregnant base by ElizaWy; remaining animations, recolors and edits to v3 base by bluecarrot16
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Joe White,Matthew Krohn (makrohn),Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+legs/pants/thin/walk.png
+    notes    : original male pants by wulax, edited for female by Joe White, recolors and edits to v3 base by bluecarrot16, teen legs by ElizaWy derived from base, climb/jump/run/sit/emotes/revised combat by JaidynReiman based on ElizaWy's LPC Revised
+    authors  : bluecarrot16,JaidynReiman,ElizaWy,Joe White,Matthew Krohn (makrohn),Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/pants2/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, original pants by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/shorts/short_shorts/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, original shorts by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/shorts/shorts/thin/walk.png
+    notes    : Original bases by Redshrike, thrust/shoot bases by Wulax, original shorts by ElizaWy, climb/jump/run/sit/emotes/revised combat by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-pants
+
+legs/skirts/belle/thin/walk.png
+    notes    : extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16
+    authors  : bluecarrot16,Matthew Krohn (makrohn),Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-dress-in-combat-poses
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+legs/skirts/child/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-for-children
+
+legs/skirts/legion/thin/walk.png
+    notes    : original by Nila122 to legion, adapted to v3 bases by bluecarrot16, climb/jump/sit/run by JaidynReiman
+    authors  : bluecarrot16,Nila122,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-roman-armor
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-armour
+
+legs/skirts/overskirt/thin/walk.png
+    notes    : original princess.xcf by Sharm, extended to all poses by makrohn, edited to v3 bases and animation cleanup by bluecarrot16
+    authors  : bluecarrot16,Matthew Krohn (makrohn),Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-dress-in-combat-poses
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+legs/skirts/plain/thin/walk.png
+    notes    : original by wulax, edited for female base by pvigier, edited for v3 base by bluecarrot16, idle & sit by Ahmad3366, color reduced & female sit/emote by JaidynReiman
+    authors  : bluecarrot16,Pierre Vigier (pvigier),Johannes Sjölund (wulax),Ahmad3366,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+legs/skirts/slit/thin/walk.png
+    notes    : original **TightDress** by Nila122, edited to skirt by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16
+    authors  : Nila122,ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+legs/skirts/straight/thin/walk.png
+    notes    : original skirt by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16
+    authors  : bluecarrot16,ElizaWy
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+neck/amulet/cross/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/amulet/dangle/female/walk.png
+    authors  : bluecarrot16,AntumDeluge
+    licenses : CC0
+    url      : https://opengameart.org/content/dungeon-crawl-32x32-tiles
+    url      : https://opengameart.org/content/cc0-jewelry-icons
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/amulet/spider/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/amulet/star/female/walk.png
+    authors  : bluecarrot16,AntumDeluge,7Soul
+    licenses : CC0
+    url      : https://www.deviantart.com/7soul1/art/129892453
+    url      : https://opengameart.org/content/cc0-jewelry-icons
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/capeclip/thin/walk.png
+    notes    : adapted to male body and v3 bases by bluecarrot16
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+neck/capetie/thin/walk.png
+    notes    : adapted to male body and v3 bases by bluecarrot16
+    authors  : bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+
+neck/charm/box/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/charm/oval/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/charm/ring/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/charm/star/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/cravat/thin/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+neck/gem/emerald/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/marquise/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/natural/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/pear/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/pearl/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/princess/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/round/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/gem/trilliant/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/jabot/thin/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+neck/necklace/beaded_large/thin/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/necklace/beaded_small/thin/walk.png
+    notes    : minor cleanup + Jump/Run/Sit/Emote by JaidynReiman
+    authors  : bluecarrot16,JaidynReiman
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/necklace/chain/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/necklace/female/walk.png
+    notes    : extra animations by bluecarrot16
+    authors  : bluecarrot16,Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/female-mage-clothing-set
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+neck/necklace/simple/female/walk.png
+    authors  : bluecarrot16
+    licenses : CC0
+    url      : https://opengameart.org/content/lpc-jewelry
+
+neck/scarf/walk.png
+    notes    : Original by Nila122, climb/sit/emote/jump/run animations by JaidynReiman
+    authors  : Nila122,JaidynReiman,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-SA 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+
+neck/tie/bowtie/adult/walk.png
+    notes    : Originally by pennomi/laetissima/Makrohn, edited by bluecarrot16, recolors by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Thane Brimhall (pennomi),laetissima,Makrohn
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+
+neck/tie/bowtie2/adult/walk.png
+    authors  : ElizaWy
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing/Feminine%2C%20Thin/Accessories
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing/Masculine%2C%20Thin/Accessories/Neckwear%2001%20-%20Bowtie
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+neck/tie/necktie/female/walk.png
+    notes    : Originally by pennomi/laetissima/Makrohn, edited by bluecarrot16, animations and recolors by JaidynReiman
+    authors  : JaidynReiman,bluecarrot16,Thane Brimhall (pennomi),laetissima,Makrohn
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+
+quiver/walk.png
+    authors  : Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+torso/aprons/apron/female/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-aprons
+
+torso/aprons/apron_full/female/walk.png
+    notes    : original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16
+    authors  : ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/aprons/apron_half/female/walk.png
+    notes    : original apron by ElizaWy, extended to all animation frames and edited for v3 bases by bluecarrot16
+    authors  : ElizaWy,bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/aprons/overalls/female/walk.png
+    notes    : original overalls by ElizaWy, extended to all animation frames, adapted from teen to male base, and edited for v3 bases by bluecarrot16; extended to combat animations by JaidynReiman
+    authors  : ElizaWy,bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/aprons/suspenders/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/combat adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+
+torso/armour/leather/female/walk.png
+    notes    : recolor of torso/armour/leather/female/brown.png, adapted to v3 bases by bluecarrot16, reduced colors and climb/emote/jump by JaidynReiman
+    authors  : Michael Whitlock (bigbeargames),Matthew Krohn (makrohn),Johannes Sjölund (wulax),bluecarrot16,JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : https://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-expanded-armor
+
+torso/armour/legion/female/walk.png
+    notes    : adapted to v3 bases by bluecarrot16, jump/run/sit/combat and teen by JaidynReiman, color reduction to 6 colors inspired by Napsio (Vitruvian Studio)
+    authors  : Napsio (Vitruvian Studio),JaidynReiman,bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-roman-armor
+
+torso/armour/plate/female/walk.png
+    notes    : original by wulax, adapted to female base by makrohn, recolor by bigbeargames, color reduced to 7 colors and adapted to v3 bases by bluecarrot16, run/jump/sit/climb/revised combat by JaidynReiman, reduced colors to 6 (based on Napsio's Vitruvian)
+    authors  : JaidynReiman,bluecarrot16,Michael Whitlock (bigbeargames),Matthew Krohn (makrohn),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/bandage/female/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 2.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-bandages
+
+torso/chainmail/female/walk.png
+    notes    : minor edits by bluecarrot16, reduced colors by Napsio, adjusted Male colors and Idle/Sit/Emote/Climb/Run by JaidynReiman
+    authors  : Johannes Sjölund (wulax),Napsio (Vitruvian Studio),JaidynReiman
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+torso/clothes/blouse/female/walk.png
+    notes    : original princess.xcf by Sharm, edited to blouse by ElizaWy; adapted to v3 bases by bluecarrot16
+    authors  : bluecarrot16,ElizaWy,Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+
+torso/clothes/blouse_longsleeve/female/walk.png
+    notes    : original princess.xcf by Sharm, edited to blouse by ElizaWy; blouse + longsleeve adapted to v3 bases by bluecarrot16
+    authors  : bluecarrot16,ElizaWy,Lanea Zimmerman (Sharm)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+
+torso/clothes/corset/female/walk.png
+    notes    : original by Nila122, recolored by ElizaWy
+    authors  : ElizaWy,Nila122
+    licenses : OGA-SA 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+
+torso/clothes/longsleeve/formal/male/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+
+torso/clothes/longsleeve/formal_striped/male/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-2-characters
+
+torso/clothes/longsleeve/laced/male/walk.png
+    authors  : bluecarrot16,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/clothes/longsleeve/longsleeve/female/walk.png
+    notes    : original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2_buttoned/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2_cardigan/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2_polo/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2_scoop/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeve2_vneck/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeves/female/walk.png
+    notes    : original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeves2/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male/standalone sleeves adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/longsleeves_cuffed/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male/standalone sleeves adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/longsleeve/scoop/female/walk.png
+    notes    : body by Redshrike, scoop shirt by ElizaWy derived from base; adapted to v3 bodies by bluecarrot16; climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-pregnancy-bases-maternity-wear
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/robe/female/walk.png
+    authors  : Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/female-mage-clothing-set
+
+torso/clothes/shirt/child/walk.png
+    authors  : Nila122
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-clothes-for-children
+
+torso/clothes/shortsleeve/shortsleeve/female/walk.png
+    notes    : original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; cleanup and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/shortsleeve_cardigan/female/walk.png
+    notes    : original by ElizaWy; shortsleeve cardigan adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/shortsleeve_polo/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/shortsleeves/female/walk.png
+    notes    : original by ElizaWy, edited to v3 bases by bluecarrot16; cleanup, split sleeves, and climb/jump/run/sit/emote/revised combat adapted from LPC Revised by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/shortsleeves2/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male/standalone sleeves adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/tshirt/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/tshirt_buttoned/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/tshirt_scoop/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/shortsleeve/tshirt_vneck/female/walk.png
+    notes    : original by ElizaWy; spellcast/thrust/shoot/hurt/male adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/laced/male/walk.png
+    authors  : bluecarrot16,Matthew Krohn (makrohn),JaidynReiman,Marcel van de Steeg (MadMarcel),Nila122,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/clothes/sleeveless/sleeveless/female/walk.png
+    notes    : **pirate shirt** by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless by JaidynReiman, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16
+    authors  : ElizaWy,JaidynReiman,Matthew Krohn (makrohn),Marcel van de Steeg (MadMarcel),Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/clothes/sleeveless/sleeveless1/female/walk.png
+    notes    : original by ElizaWy walkcycle only; extended to all animations by adapting from longsleeve, edited to v3 bases by bluecarrot16; sleeveless variant by JaidynReiman
+    authors  : bluecarrot16,ElizaWy,JaidynReiman,Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/liberated-pixel-cup-lpc-base-assets-sprites-map-tiles
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : http://opengameart.org/content/lpc-clothing-updates
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2_buttoned/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2_cardigan/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2_polo/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2_scoop/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/sleeveless2_vneck/female/walk.png
+    notes    : original by ElizaWy; sleeveless adapted from original by JaidynReiman
+    authors  : ElizaWy,JaidynReiman,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/lpc-revised-character-basics
+    url      : https://github.com/ElizaWy/LPC/tree/main/Characters/Clothing
+    url      : https://opengameart.org/content/lpc-expanded-sit-run-jump-more
+    url      : https://opengameart.org/content/lpc-expanded-simple-shirts
+
+torso/clothes/sleeveless/striped/male/walk.png
+    authors  : bluecarrot16,Matthew Krohn (makrohn),JaidynReiman,Marcel van de Steeg (MadMarcel),Nila122,Johannes Sjölund (wulax),Stephen Challener (Redshrike)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/clothes/sleeveless/tanktop/female/walk.png
+    notes    : **pirate shirt** by MadMarcel, edited to all poses by makrohn, cleanup and re-drawing by ElizaWy, edits for v3 bases and further cleanup by bluecarrot16
+    authors  : bluecarrot16,ElizaWy,Matthew Krohn (makrohn),Marcel van de Steeg (MadMarcel),Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-7-womens-shirts
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/clothes/tunic/female/walk.png
+    notes    : **pirate shirt** by MadMarcel, edited to all poses by makrohn, edited from tube-top/tanktop to sleeveless then to tunic by JaidynReiman, edits for v3 bases and further cleanup by bluecarrot16
+    authors  : bluecarrot16,JaidynReiman,Matthew Krohn (makrohn),Marcel van de Steeg (MadMarcel),Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-female-orcogregoblintroll-base-walkcycle
+    url      : https://opengameart.org/content/lpc-curly-hair-elven-ears-white-cape-with-blue-trim-and-more
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/clothes/tunic_sara/female/walk.png
+    authors  : Mandi Paugh,William.Thompsonj,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/sara-wizard
+    url      : https://opengameart.org/content/lpc-sara
+
+torso/clothes/vest/male/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima,Stephen Challener (Redshrike),Johannes Sjölund (wulax)
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/clothes/vest_open/male/walk.png
+    authors  : bluecarrot16,Thane Brimhall (pennomi),laetissima
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/collared/male/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/frock/male/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/iverness/male/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+
+torso/jacket/santa/male/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+    url      : https://opengameart.org/content/lpc-santa
+
+torso/jacket/tabard/female/walk.png
+    notes    : original by wulax, edited to female base by makrohn and JaidynReiman, edited to v3 base by bluecarrot16
+    authors  : JaidynReiman,Matthew Krohn (makrohn),Johannes Sjölund (wulax)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : http://opengameart.org/content/lpc-clothing-updates
+
+torso/jacket/trench/male/walk.png
+    authors  : bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-gentleman
+
+torso/jacket/trim/frock_buttons/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/trim/frock_collar/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/trim/frock_lace/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/trim/frock_lapel/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/jacket/trim/jacket_pockets/walk.png
+    authors  : bluecarrot16
+    licenses : OGA-BY 3.0
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/belt_belly/female/walk.png
+    authors  : bluecarrot16,Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : https://opengameart.org/content/lpc-pirates
+    url      : https://opengameart.org/content/lpc-santa
+
+torso/waist/belt_double/female/walk.png
+    authors  : bluecarrot16,Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/belt_formal/walk.png
+    authors  : Thane Brimhall (pennomi),laetissima,bluecarrot16
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-2-characters
+    url      : https://opengameart.org/content/lpc-gentleman
+
+torso/waist/belt_leather/female/walk.png
+    authors  : bluecarrot16,Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/belt_leather2/female/walk.png
+    authors  : Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+
+torso/waist/belt_loose/female/walk.png
+    authors  : bluecarrot16,Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-combat-armor-for-women
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/belt_mage/walk.png
+    authors  : Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/female-mage-clothing-set
+
+torso/waist/belt_robe/female/walk.png
+    authors  : Johannes Sjölund (wulax),Matthew Krohn (makrohn)
+    licenses : OGA-BY 3.0,CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/lpc-medieval-fantasy-character-sprites
+
+torso/waist/buckles/female/walk.png
+    authors  : Luke Mehl
+    licenses : CC-BY-SA 3.0,GPL 3.0
+    url      : https://opengameart.org/content/female-mage-clothing-set
+
+torso/waist/obi/knot/left/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+torso/waist/obi/knot/right/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+torso/waist/obi/thin/walk.png
+    authors  : JaidynReiman
+    licenses : OGA-BY 3.0+,CC-BY 3.0+,GPL 3.0
+    url      : https://opengameart.org/content/lpc-kimono-relm
+
+torso/waist/sash/female/walk.png
+    authors  : bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,GPL 2.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/sash_narrow/female/walk.png
+    authors  : bluecarrot16,Nila122
+    licenses : OGA-BY 3.0,GPL 2.0,GPL 3.0,CC-BY-SA 3.0
+    url      : https://opengameart.org/content/more-lpc-clothes-and-hair
+    url      : https://opengameart.org/content/lpc-pirates
+
+torso/waist/waistband/female/walk.png
+    notes    : LPC Sara by Redshrike, contributed by William Thompsonj, Waistband Separated by Bluecarrot16
+    authors  : Bluecarrot16,Mandi Paugh,Stephen Challener (Redshrike),William.Thompsonj
+    licenses : OGA-BY 3.0
+    url      : http://opengameart.org/content/sara-wizard
+    url      : https://opengameart.org/content/lpc-sara
+

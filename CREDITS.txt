@@ -1,0 +1,15 @@
+PIXEL WARDROBE / 像素衣橱 — ART CREDITS
+========================================================================
+
+像素立绘素材来自 Liberated Pixel Cup (LPC) /
+Universal LPC Spritesheet Character Generator:
+  https://github.com/LiberatedPixelCup/Universal-LPC-Spritesheet-Character-Generator
+Sprites contributed as part of the Liberated Pixel Cup project on OpenGameArt.org:
+  http://opengameart.org/content/lpc-collection
+
+本作品对原素材做了两件事：裁出一帧正面站姿；用调色板换色（含自配的
+「莫兰迪」「婚礼」两套）。这属于衍生作品，原授权继续生效，见 LICENSES.md。
+
+逐文件的完整作者名单（60 位作者）：
+  assets/female/CREDITS.txt   女生版素材包
+  assets/male/CREDITS.txt     男生版素材包
